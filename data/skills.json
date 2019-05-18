@@ -1,0 +1,18 @@
+[
+  {
+      "grouping":"Architecture & Concepts",
+      "skills":[ "REST","SOAP","Webservices","scrum"]
+  },
+  {
+      "grouping":"Languages, Operating Systems & Dev Tools",
+      "skills":[ "Java","Python","clojure","php","javascript","git","linux","maven","bash","database","mysql","mongodb","angular","react","nodejs","npm","css3","html5"]
+  },
+  {
+    "grouping":"Platform, Container & Cloud Administration",
+      "skills":[
+          {"name":"heroku","link":"https://heroku.com"},
+          {"name":"CircleCI","link":"https://circleci.com"},
+		  {"name":"firebase","link":"https://firebase.com"}
+      ]
+  }
+]

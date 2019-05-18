@@ -1,0 +1,26 @@
+[
+    {
+        "role":"Analyst Developer",
+        "company":"Levio Conseils Inc",
+        "summary":"Software consultant. Front-end and back-end developement for a financial application, and for e-commerce",
+        "range":"September 2018 - Present"
+    },
+    {
+        "role":"Analyst Developer",
+        "company":"Netim",
+        "summary":"Creation of a SDK for resellers, analysis of a new web hosting architecture, integration of third-party tools into the system (PayPal, Blesta), integration of new pages on the website, automation of tasks for marketing, back-end maintenance.",
+        "range":"September 2017 - September 2018"
+    },
+    {
+        "role":"Intern",
+        "company":"Inria Lille-Nord Europe",
+        "summary":"Machine learning for optimization of interactive systems",
+        "range":"Avril 2014 - Juin 2014"
+    },
+	{
+		"role":"Developer (Summer Job)",
+		"company":"Norsys",
+		"summary":"Web service for monitoring sales for the company 'Les 3 Suisses'",
+		"range":" July 2012 - August 2012"
+	}
+]

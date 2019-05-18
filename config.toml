@@ -1,0 +1,86 @@
+baseURL = "https://julienrouse.com/"
+languageCode = "en-us"
+title = "Learning for fun and profits"
+theme = "hugo-resume"
+Content = "CONTENT"
+
+# Code 
+pygmentsCodefences = true # Allow syntax highlighting for code block
+pygmentsCodefencesGuessSyntax = true # Pygment will try to guess what language is in the code block to use the right highlighting
+pygmentsUseClassic = false # set to true to use the slow pygment instead of chroma
+pygmentsOptions = "linenos=table"
+
+
+# GDPR
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
+
+# Theme options and parameters
+[params]
+    firstName = "Julien"
+    lastName = "Rousé"
+    address = "Montreal, QC"
+    phone = "1-999-999-9999"
+    contactNote = "Developer" #used in QR code only
+    profileImage = "img/me.png"
+    email = "contact@julienrouse.com"
+    description = "Software Developer with varied interests like functional programing, Lisp languages, security and more!" # Goes into <meta:description>
+    favicon = "images/favicon.ico"
+
+    # what sections to display.  Setting to false disables navigation and section.
+    showSkills = false
+    showProjects = false
+    showOpenSource = false
+    showPublications = false
+    showExperience = false
+    showEducation = false
+	showBlog = true
+    showQr = false
+
+    # do you want to show git hash on page footer and link to repo? Add commit URl for repo here.
+    gitCommitPrefix = "https://github.com/YOURNAME/REPONAME/commit/"
+
+
+[[params.handles]]
+    name = "LinkedIn"
+    link = "https://www.linkedin.com/in/julien-rousé/"
+
+[[params.handles]]
+    name = "GitHub"
+    link = "https://github.com/julienrouse/"
+
+#[[params.handles]]
+#    name = "Bitbucket"
+#    link = "https://bitbucket.org/<username>/"
+
+[[params.handles]]
+    name = "Stack Overflow"
+    link = "https://stackoverflow.com/users/story/3729797"
+    icon = "stack-overflow" #optional icon attribute used for Font Awesome icons, otherwise the name is lowercased.
+
+#[[params.handles]]
+#    name = "Keybase"
+#    link = "https://keybase.io/<username>"
+#    icon = "key" #optional icon attribute used for Font Awesome icons, otherwise the name is lowercased.
+
+[[params.handles]]
+    name = "HackerRank"
+	link = "https://www.hackerrank.com/JulienRouse?hr_r=1"
+	
+
+[params.google.analytics]
+    trackerID = "XX-123446-01"
+
+[outputs] #only required for search
+    home = ["HTML", "JSON"]
