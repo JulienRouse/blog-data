@@ -17,10 +17,11 @@ jobs:
       # checkout the repository
       - checkout
 
-      # LS
+      # ls pour essayer d'y voir plus clair
       - run: ls -la
+      
       # build with Hugo
-      - run: hugo -v
+      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DI
       
       # Go to the build folder
       - run: cd $HUGO_BUILD_DIR
