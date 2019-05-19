@@ -17,18 +17,35 @@ jobs:
       # checkout the repository
       - checkout
 
-      # install git submodules for managing third-party dependencies
-      - run: git submodule sync && git submodule update --init
-
-      # Link the public dir to the gh-pages branch
-
-      - run: rm -fr $HUGO_BUILD_DIR && git worktree add -B gh-pages $HUGO_BUILD_DIR origin/gh-pages
-
       # build with Hugo
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
-
+      
+      # Go to the build folder
+      - run: cd $HUGO_BUILD_DIR
+      
+      # Add changes to git
+      - run: git add .
+      
       # Set some variables to add to the commit message
       - run: git config --global user.email "noreply@example.com" && git config --global user.name "CircleCI Bot"
+      
+      # Commit changes
+      - run: git commit -m "Automated publish to gh-pages [ci skip]" && git push origin master
+      
+      # Come back to root
+      - run: cd ..
+      
+      # install git submodules for managing third-party dependencies
+      #- run: git submodule sync && git submodule update --init
+      
+      # Link the public dir to the gh-pages branch
+      #- run: rm -fr $HUGO_BUILD_DIR && git worktree add -B gh-pages $HUGO_BUILD_DIR origin/gh-pages
+
+      # build with Hugo
+      #- run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+
+      # Set some variables to add to the commit message
+      #- run: git config --global user.email "noreply@example.com" && git config --global user.name "CircleCI Bot"
 
       # Push the generated files back to github
-      - run: cd $HUGO_BUILD_DIR && git add --all && git commit -m "Automated publish to gh-pages [ci skip]" && git push
+      #- run: cd $HUGO_BUILD_DIR && git add --all && git commit -m "Automated publish to gh-pages [ci skip]" && git push
