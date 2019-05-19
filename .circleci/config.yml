@@ -21,7 +21,7 @@ jobs:
       - run: ls -la
       
       # build with Hugo
-      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - run: rm -fr $HUGO_BUILD_DIR && HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       
       # Go to the build folder
       - run: cd $HUGO_BUILD_DIR
