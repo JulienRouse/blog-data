@@ -17,6 +17,8 @@ jobs:
       # checkout the repository
       - checkout
 
+      # LS
+      - run: ls -la
       # build with Hugo
       - run: hugo -v
       
