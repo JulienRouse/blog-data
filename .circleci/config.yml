@@ -18,7 +18,7 @@ jobs:
       - checkout
 
       # build with Hugo
-      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - run: hugo -v
       
       # Go to the build folder
       - run: cd $HUGO_BUILD_DIR
