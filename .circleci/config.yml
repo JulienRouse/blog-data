@@ -25,7 +25,7 @@ jobs:
           command: git submodule update
       
       # ls
-      - run: ls -la /public
+      - run: ls -la 
       
        # ls
       - run: pwd
