@@ -18,28 +18,28 @@ jobs:
       - checkout
 
       # make deploy.sh executable
-      - run: chmod +x deploy.sh
+      #- run: chmod +x deploy.sh
       
       # run deploy.sh
-      - run: ./deploy.sh
+      #- run: ./deploy.sh
       
       # build with Hugo
-      #- run: rm -fr $HUGO_BUILD_DIR && HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - run: rm -fr $HUGO_BUILD_DIR && HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       
       # Go to the build folder
-      #- run: cd $HUGO_BUILD_DIR
+      - run: cd $HUGO_BUILD_DIR
       
       # Add changes to git
-      #- run: git add .
+      - run: git add .
       
       # Set some variables to add to the commit message
-      #- run: git config --global user.email "noreply@example.com" && git config --global user.name "CircleCI Bot"
+      - run: git config --global user.email "noreply@example.com" && git config --global user.name "CircleCI Bot"
       
       # Commit changes
-      #- run: git commit -m "Automated publish to gh-pages [ci skip]" && git push origin master
+      - run: git commit -m "Automated publish to gh-pages [ci skip]" && git push origin master
       
       # Come back to root
-      #- run: cd ..
+      - run: cd ..
       
       # install git submodules for managing third-party dependencies
       #- run: git submodule sync && git submodule update --init
