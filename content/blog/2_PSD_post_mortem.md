@@ -5,7 +5,7 @@ date: Sat, 18 May 2019 18:00:00 +0000
 draft: false
 tags: [certification,scrum,scrum.org,post-mortem]
 featured: true
-toc: true
+toc: false
 summary: "Reflection on how I got my PSD1 certification and what you can learn from my success and failures."
 ---
 
@@ -14,7 +14,7 @@ summary: "Reflection on how I got my PSD1 certification and what you can learn f
 
 *I'm not sure post-mortem is the right expression.*
 
-Anyway, a few wee ks ago I obtained the PSD1 certification from [scrum.org](https://www.scrum.org) and this is a recap on my learning experience. Also at the end there are tips for you if you want to try it as well!
+Anyway, a few wee    ks ago I obtained the PSD1 certification from [scrum.org](https://www.scrum.org) and this is a recap on my learning experience. Also at the end there are tips for you if you want to try it as well!
 
 ## Disclaimer about certifications
 

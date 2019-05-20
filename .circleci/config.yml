@@ -25,10 +25,7 @@ jobs:
           command: git submodule update
       
       # ls
-      - run: ls -la
-      
-       # ls
-      - run: ls -la themes
+      - run: ls -la /public
       
        # ls
       - run: pwd
@@ -41,7 +38,7 @@ jobs:
       - run: hugo -v -d ./public -s .
       
       # ls
-      - run: ls -la
+      - run: ls -la /public
       
       # git status
       - run: git status
@@ -49,11 +46,17 @@ jobs:
       # Go to the build folder
       - run: cd public/
       
+       # ls
+      - run: pwd
+      
+      # ls
+      - run: ls -la
+      
       # git status
       - run: git status
       
       # Add changes to git
-      - run: git add .
+      - run: git add public/
       
       # Set some variables to add to the commit message
       - run: git config --global user.email "noreply@example.com" && git config --global user.name "CircleCI Bot"
