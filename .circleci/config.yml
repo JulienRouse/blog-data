@@ -27,6 +27,12 @@ jobs:
       # ls
       - run: ls -la
       
+       # ls
+      - run: ls -la themes
+      
+       # ls
+      - run: ls -la themes/hugo-resume
+      
       # git status
       - run: git status
       
