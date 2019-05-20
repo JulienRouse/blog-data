@@ -1,10 +1,10 @@
 ---
 title: 'Setting up Hugo, GithubPage and CircleCI to launch a blog'
-url: 'setting_up_hugo_githubpage_and_circleci_to_launch_a_blog'
+url: '/blog/setting_up_hugo_githubpage_and_circleci_to_launch_a_blog'
 date: Sun, 26 May 2019 14:54:04 +0000
-draft: true
+draft: false
 tags: [hugo,circleci,blog,how-to,github]
-featured: true
+featured: false
 toc: true
 summary: "How Hugo, Github Pages and CircleCI helped me bring back to life my blog."
 ---

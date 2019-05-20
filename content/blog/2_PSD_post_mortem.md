@@ -1,6 +1,6 @@
 ---
 title: 'PSD1 certification post-mortem'
-url: 'professional-scrum-developer-certification-post-mortem'
+url: '/blog/professional-scrum-developer-certification-post-mortem'
 date: Sat, 18 May 2019 18:00:00 +0000
 draft: false
 tags: [certification,scrum,scrum.org,post-mortem]
