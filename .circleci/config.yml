@@ -8,7 +8,7 @@ jobs:
       - image: cibuilds/hugo:latest
     working_directory: ~/hugo
     environment:
-      HUGO_BUILD_DIR: ~/hugo/public
+      HUGO_BUILD_DIR: public
     steps:
 
       # install git
@@ -16,18 +16,12 @@ jobs:
 
       # checkout the repository
       - checkout
-
-      # make deploy.sh executable
-      #- run: chmod +x deploy.sh
-      
-      # run deploy.sh
-      #- run: ./deploy.sh
       
       # build with Hugo
-      - run: rm -fr $HUGO_BUILD_DIR && HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - run: rm -rf public/* && HUGO_ENV=production hugo -v
       
       # Go to the build folder
-      - run: cd $HUGO_BUILD_DIR
+      - run: cd public
       
       # Add changes to git
       - run: git add .
@@ -41,18 +35,3 @@ jobs:
       # Come back to root
       - run: cd ..
       
-      
-      # install git submodules for managing third-party dependencies
-      #- run: git submodule sync && git submodule update --init
-      
-      # Link the public dir to the gh-pages branch
-      #- run: rm -fr $HUGO_BUILD_DIR && git worktree add -B gh-pages $HUGO_BUILD_DIR origin/gh-pages
-
-      # build with Hugo
-      #- run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
-
-      # Set some variables to add to the commit message
-      #- run: git config --global user.email "noreply@example.com" && git config --global user.name "CircleCI Bot"
-
-      # Push the generated files back to github
-      #- run: cd $HUGO_BUILD_DIR && git add --all && git commit -m "Automated publish to gh-pages [ci skip]" && git push
