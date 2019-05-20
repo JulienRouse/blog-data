@@ -25,7 +25,7 @@ jobs:
       
       # build with Hugo
       #- run: rm -rf public/* && HUGO_ENV=production hugo -v
-      - run: hugo -v
+      - run: hugo -v -d ./public
       
       # ls
       - run: ls -la
