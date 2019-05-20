@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>certification on Learning for fun and profits</title>
+    <link>https://julienrouse.com/tags/certification/</link>
+    <description>Recent content in certification on Learning for fun and profits</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 May 2019 18:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://julienrouse.com/tags/certification/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PSD1 certification post-mortem</title>
+      <link>https://julienrouse.com/blog/professional-scrum-developer-certification-post-mortem/</link>
+      <pubDate>Sat, 18 May 2019 18:00:00 +0000</pubDate>
+      
+      <guid>https://julienrouse.com/blog/professional-scrum-developer-certification-post-mortem/</guid>
+      <description>Reflection on how I got my PSD1 certification and what you can learn from my success and failures.</description>
+    </item>
+    
+  </channel>
+</rss>

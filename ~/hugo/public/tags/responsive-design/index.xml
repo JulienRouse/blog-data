@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>responsive design on Learning for fun and profits</title>
+    <link>https://julienrouse.com/tags/responsive-design/</link>
+    <description>Recent content in responsive design on Learning for fun and profits</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://julienrouse.com/tags/responsive-design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hugo-resume fix some css</title>
+      <link>https://julienrouse.com/projects/contributions/hugo-resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://julienrouse.com/projects/contributions/hugo-resume/</guid>
+      <description>It feels good to fix the theme I use for the blog, I give back to a tool I will use for some time hopefully :)
+The problem was that when looking at blog post with full resolution on my laptop, it displayed nicely. But when viewing it with smartphone resolution, it looked like this:
+  After some duckduckgoing, I stumbled upon box-sizing: border-box, an element I have not used before.</description>
+    </item>
+    
+  </channel>
+</rss>
