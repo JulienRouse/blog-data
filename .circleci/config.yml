@@ -31,14 +31,14 @@ jobs:
       - run: ls -la themes
       
        # ls
-      - run: ls -la themes/hugo-resume
+      - run: pwd
       
       # git status
       - run: git status
       
       # build with Hugo
       #- run: rm -rf public/* && HUGO_ENV=production hugo -v
-      - run: hugo -v -d ./public
+      - run: hugo -v -d ./public -s .
       
       # ls
       - run: ls -la
