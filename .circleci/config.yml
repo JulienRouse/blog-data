@@ -44,7 +44,7 @@ jobs:
       - run: git status
       
       # Go to the build folder
-      - run: cd public/ && git add . && git config --global user.email "noreply@example.com" && git config --global user.name "CircleCI Bot" && git commit -m "Automated publish to gh-pages [ci skip]" && git push origin master
+      - run: cd public/ && git add . && git config --global user.email "noreply@example.com" && git config --global user.name "CircleCI Bot" && git commit -m "Automated publish to JulienRouse.github.io [ci skip]" && git push origin master
        
        # ls
       - run: pwd
@@ -56,13 +56,13 @@ jobs:
       - run: git status
       
       # Add changes to git
-      - run: git add public/
+      - run: git add .
       
       # Set some variables to add to the commit message
       - run: git config --global user.email "noreply@example.com" && git config --global user.name "CircleCI Bot"
       
       # Commit changes
-      - run: git commit -m "Automated publish to gh-pages [ci skip]" && git push origin master
+      - run: git commit -m "Automated publish to JulienRouse.github.io [ci skip]" && git push origin master
       
       # Come back to root
       - run: cd ..
