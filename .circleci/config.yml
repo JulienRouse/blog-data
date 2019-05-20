@@ -17,12 +17,27 @@ jobs:
       # checkout the repository
       - checkout
       
+      # ls
+      - run: ls -la
+      
+      # git status
+      - run: git status
+      
       # build with Hugo
       #- run: rm -rf public/* && HUGO_ENV=production hugo -v
       - run: hugo -v
       
+      # ls
+      - run: ls -la
+      
+      # git status
+      - run: git status
+      
       # Go to the build folder
       - run: cd public/
+      
+      # git status
+      - run: git status
       
       # Add changes to git
       - run: git add .
