@@ -17,6 +17,13 @@ jobs:
       # checkout the repository
       - checkout
       
+      - run:
+          name: "Initialize git submodules"
+          command: git submodule init
+      - run:
+          name: "Update submodles"
+          command: git submodule update
+      
       # ls
       - run: ls -la
       

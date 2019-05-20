@@ -14,7 +14,7 @@ summary: "Reflection on how I got my PSD1 certification and what you can learn f
 
 *I'm not sure post-mortem is the right expression.*
 
-Anyway, a few weeks ago I obtained the PSD1 certification from [scrum.org](https://www.scrum.org) and this is a recap on my learning experience. Also at the end there are tips for you if you want to try it as well!
+Anyway, a few wee ks ago I obtained the PSD1 certification from [scrum.org](https://www.scrum.org) and this is a recap on my learning experience. Also at the end there are tips for you if you want to try it as well!
 
 ## Disclaimer about certifications
 
