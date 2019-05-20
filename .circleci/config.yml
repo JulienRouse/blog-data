@@ -17,7 +17,10 @@ jobs:
       # checkout the repository
       - checkout
 
-      # ls pour essayer d'y voir plus clair
+      # make deploy.sh executable
+      - run: chmod +x deploy.sh
+      
+      # run deploy.sh
       - run: ./deploy.sh
       
       # build with Hugo
