@@ -44,7 +44,7 @@ jobs:
       - run: git status
       
       # Go to the build folder
-      - run: cd public/ && git add . && git config --global user.email "noreply@example.com" && git config --global user.name "CircleCI Bot" && git commit -m "Automated publish to JulienRouse.github.io [ci skip]" && git push origin master
+      - run: cd public/ && pwd && git add . && git config --global user.email "noreply@example.com" && git config --global user.name "CircleCI Bot" && git commit -m "Automated publish to JulienRouse.github.io [ci skip]" && git push origin master
        
        # ls
       - run: pwd
