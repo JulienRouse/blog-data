@@ -1,4 +1,4 @@
-baseURL = "https://julienrouse.com/"
+baseURL = "https://www.julienrouse.com/"
 languageCode = "en-us"
 title = "Learning for fun and profits"
 theme = "hugo-resume"
