@@ -1,23 +1,23 @@
 ---
 title: 'Tutorial for a Idle game with Svelte (Part2)'
 url: '/blog/tutorial-for-idle-game-svelte-part2'
-date: Sat, 01 Jun 2019 20:00:00 +0000
+date: Sat, 15 Jun 2019 20:00:00 +0000
 draft: true
 tags: [svelte,SPA,game,tutorial,idle]
 featured: false
 toc: true
-summary: "Diving deeper into Svelte, continuing our little idle game."
+summary: "Diving deeper into Svelte, continuing our idle game."
 ---
 
-# Part2
+# Part2: Going further with Svelte using components and props
 
 ## Introduction
 
-Link to the Svelte Introduction: TODO
+This article is the second part of a tutorial aiming at discovering Svelte while building a game. I also wrote a very short post on Svelte and the idea behind this tutorial. Below you can find the links to check those posts or other parts of the tutorial.
 
-Link to the first part: TODO 
-
-Link to next part: TODO
+- [introduction to Svelte]({{< relref "3_Introduction_to_Svelte.md" >}})
+- [part1: Start of the tutorial: making a Derivative Idle clone with Svelte]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})
+- [part2: Going further with Svelte using components and props]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte_part2.md" >}})
 
 ## Objectives for this part
 
@@ -42,13 +42,13 @@ One way to do that would be to copy-paste the following code to add a new buildi
 </button>
 ```
 
-Try it yourself, it makes a second building. The problem is that the two buildings are identical, and they share the same internals details. The number of building bought, the cost of it, how much money it generates each tick...
+Try it yourself, it makes a second building. The problem is that the two buildings are identical, and they share their internal state. The number of building bought, the cost of it, how much money it generates each tick...
 
 We need a way to encapsulate those information locally to have each building handle this for itself.
 
-And that is what components are for! (It's the same concept in React and Angular). When you need to repeat the same independent elements (with slight variations) in different places, components are the way to go. They are also a nice way to have *building block* (think Lego) for your application. Usually can have big components for the header, footer and main page. Then you can have smaller components like forms and menus that you can reuse in bigger components. And you can also compose your smaller components from even smaller components. It creates a tree architecture, with the root being often named `App`, the main entry point to your app, and then the leaf and nodes are other components used to build your app. 
+And that is what components are for! (It's the same concept in React and Angular). When you need to repeat the same independent elements (with slight variations) in different places, components are the way to go. They are also a nice way to have *building block* (think Lego) for your application. Usually you can have big components for the header, footer and main page. Then you can have smaller components like forms and menus that you can reuse in bigger components. And you can also compose your smaller components from even smaller components. It creates a tree architecture, with the root being often named `App`, the main entry point to your app, and then the leaf and nodes are other components used to build your app. 
 
-To create one,  you need to create a `.svelte` file. (You can see that `App.svelte` is also our root component here).Then inside the component you can declare some logic inside the `<script>` tag, some style inside the `<style>` tag and then a html template. The script and style part are local to the component by default. You can declare a new component `Test.svelte` that look like that:
+To create one,  you need to create a `.svelte` file. (You can see that `App.svelte` is our root component here).Then inside the component you can declare some logic inside the `<script>` tag, some style inside the `<style>` tag and then a html template. The script and style part are local to the component by default. You can declare a new component `Test.svelte` that look like that:
 
 ```html
 <!-- Test.svelte -->
@@ -198,7 +198,7 @@ That's great! But as usual, if you test if, you'll see a new problem. To highlig
 </button>
 ```
 
-When you click on the buildings, you see that they are independent, but a bit too much! They don't share a common money value anymore, each one use it's one, and when they produce money, it only goes to their own money value as well. That is not what we want. We would like for them to have some global `money` value, and then handle the rest of their state independently. 
+When you click on the buildings, you see that they are independent, but a bit too much! They don't share a common money value anymore, each one use its own, and when they produce money, it only goes to their own money value as well. That is not what we want. We would like for them to have a shared `money` value, and then handle the rest of their state independently. 
 
 ### Using the store to handle global state
 
@@ -561,7 +561,7 @@ Note also that `currencyToString()` might possibly have been a component. (And t
 
 ### Building producing buildings
 
-Now that we have building producing proofs, what about building producing building?
+Now that we have building producing proofs, what about buildings producing buildings?
 
 To do that, we need to change a few things: 
 
@@ -673,20 +673,163 @@ export function currencyToString(c){
 
 To be fair, the UI needs a lot more fixing but it will do for now ;)
 
+By doing this we introduced a ~bug~ feature with the costs of the buildings, if you start by buying a building that produces another building, this building's costs will go up even so we did not buy any manually. We will ~fix this bug~ reverse this feature in the next tutorial when we will implement upgrades.
+
+## Recap
+
+That's it for this second part of the tutorial. Below is the full code we have so far.
+
+```html
+<!-- App.svelte -->
+<script>
+  // import declarations
+  import Building from './Building.svelte';
+  import { money, proofs, firstDerivativeNum, secondDerivativeNum, combinatoricsNum } from './store.js';
+  import { currencyToString } from './utils.js';
+	
+  // variable declarations
+
+  // reactive declarations
+  
+  // function declarations
+	
+  // lifecycle functions
+</script>
+
+<style>
+</style>
+
+<h1>You have {$money}{currencyToString(money)} and {$proofs}{currencyToString(proofs)}!</h1>
+
+<Building name="1th Derivative" numberOfBuilding={firstDerivativeNum}></Building>
+<Building name="Combinatorics" currencyProduced={proofs} numberOfBuilding={combinatoricsNum}></Building>
+<Building name="2nde Derivative" currencyProduced={firstDerivativeNum} numberOfBuilding={secondDerivativeNum}></Building>
+```
+
+```html
+<!-- Building.svelte -->
+<script>
+  // import declarations
+  import { onMount } from 'svelte';
+  import { money } from './store.js';
+  import { currencyToString } from './utils.js'
+	
+  // variable declarations
+  let buildingProduction = 1; // $ produced per building per tick
+  let tickSpeed = 1000;
+	
+  // props declarations
+  export let name;
+  export let currencyProduced = money;
+  export let numberOfBuilding;
+	
+  // reactive declarations
+  $: cantBuy = cost > $money;
+  $: cost = ($numberOfBuilding + 1) * 5;
+  $: productionPerTick = $numberOfBuilding * buildingProduction;
+  
+  // function declarations
+
+	// update the value of `currencyProduced` to the store, adding `n` to it.
+  function updateMoney(n){
+    money.update(m => m + n);
+  }
+	
+  // update the value of `currencyProduced` to the store, adding `n` to it.
+  function updateCurrencyProduced(n){
+    currencyProduced.update(m => m + n);
+  }
+	
+  // update the values of `currencyProduced` and `numberBuildings`
+  function updateNumbers(){
+    updateMoney(-cost);
+    numberOfBuilding.update(n => n + 1);
+  }
+	
+   // update `currencyProduced` with `productionPerTick` and set a timeout to call itself after `tickSpeed` ms
+  function launchTimeout(){
+    updateCurrencyProduced(productionPerTick);
+    setTimeout(launchTimeout, tickSpeed);
+  }
+  
+  // lifecycle functions
+  onMount(() => {
+    launchTimeout();
+  }); 
+</script>
+
+<style>
+  button {
+    outline: 1px solid black;
+    background: aliceblue;
+    cursor: pointer;
+  }
+
+  button.cantbuy {
+    background: #555;
+    color: #DDD;
+    cursor: default;
+  }
+</style>
+
+<button on:click={updateNumbers} class:cantbuy={cantBuy} disabled={cantBuy}>
+  <h3>{name}</h3>
+  <p>{buildingProduction}{currencyToString(currencyProduced)}/tick: costs {cost}$.</p>
+  <p>Owned:{$numberOfBuilding} ({$numberOfBuilding})</p>
+</button>
+```
+
+```js
+/* store.js */
+import { writable } from 'svelte/store';
+
+export const money = writable(20);
+export const proofs	= writable(0);
+
+// first level buildings
+export const firstDerivativeNum = writable(0);
+export const combinatoricsNum = writable(0);
+
+// second level buildings
+export const secondDerivativeNum = writable(0);
+```
+
+```js
+/* utils.js */
+import { money, proofs, firstDerivativeNum } from './store.js' 
+
+// Returns a string representing `currency`. If `currency` is not recognized, returns '?'
+export function currencyToString(c){
+	let result = "?";
+
+	if (c === money)
+		result = "$";
+	else if (c === proofs)
+		result = " proofs"
+	else if (c === firstDerivativeNum)
+		result = " 1st Derivative"
+
+	return result;
+}
+```
+
+And below you can see the result: 
+
+{{< figure src="/img/blog_3_part2_final_recap.png" alt="Result" >}}
+
 ## Objectives for the next parts
 
-### Update the stats recap at the top
+There are quite a few things to implement still:
 
-### Make buildings have varying costs
+- Update the stats recap at the top
+- Make buildings have varying costs
+- Upgrades for our buildings
+- Prestige layer
+- Options (Save, Export Save, Load Save, Stats, number formatting
+- Balancing the game
 
-### Upgrades
+We will continue in the next part: Coming soon.
 
-### Prestige layer
-
-### Options (Save, Export Save, Load Save, Stats, number formatting)
-
-## Additional Resources
-
-TODO add some blog post / documentation on store, subscription, component,  (Redux, re-frame)
+You can also [play with the project in the Svelte REPL](https://svelte.dev/repl/230b7ab7fe774b31b1936a2aa2ebf050?version=3.4.2) or [play the game made so far](tuto-derivative-clicker-part2.surge.sh) (hosted by Surge) .
 
 [^1]: https://github.com/Day8/re-frame

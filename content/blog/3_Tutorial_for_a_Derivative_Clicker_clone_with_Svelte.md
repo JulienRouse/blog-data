@@ -1,87 +1,49 @@
 ---
 title: 'Tutorial for a Idle game with Svelte (Part1)'
 url: '/blog/tutorial-for-idle-game-svelte-part1'
-date: Sat, 25 May 2019 20:00:00 +0000
-draft: true
+date: Sat, 08 Jun 2019 20:00:00 +0000
+draft: false
 tags: [svelte,SPA,game,tutorial,idle]
 featured: false
 toc: true
-summary: "Let's discover Svelte and build a little idle game together."
+summary: "Let's discover Svelte and build a game together."
 ---
 
 
 
 # Making a Derivative Idle clone with Svelte
 
-I wanted to try out Svelte so I made a little clone of a game called Derivative Clicker. Following is a very quick presentation of what is Svelte (and how it compares to React/Angular) then a multi part tutorial on how to make a little game app with Svelte. 
+This is the first part of a multi part tutorial on making a game with Svelte[^1]. If you have not read it already, I made an introduction to Svelte.
 
-- [part1: Svelte introduction and start of the tutorial]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})
-- [part2: Going further with Svelte using components and props]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte_part2.md" >}})
-- ??
-
-## Svelte
-
-[Svelte](https://svelte.dev/) is kind of like React or Angular (as it aims to build reactive Single Page Application), but the difference is Svelte shifts the work from the browser to the compiler. It still delivers reactive single page application but with a very reduced size. Similar initiative can be found as well with [Aurelia](https://aurelia.io/).
-
-The project went to version 3 a month ago (early may 2019), I think it's a good time to try it out :)
-
-### PROS
-
-The Svelte tutorial is great, it takes about an hour or so and is very well done. It uses the Svelte REPL and it introduces concepts very smoothly. Also it uses mostly the same concepts as React, Vue and Angular. If you know at least one of those you should pick it up quickly. (Component, reactive bindings, props, event forwarding, state store, component life cycle and slots to name a few concepts used) .
-
-Also the Svelte website features a REPL that you can use to test Svelte without installing anything. When you are ready for the next step, the [get started section](https://svelte.dev/blog/the-easiest-way-to-get-started) is handy. It's just a matter of cloning a template from GitHub and use the tools you are used to: `npm` or `yarn`, `webpack`, `rollup` or `browserify`. And to deploy, there are instructions for fast deploy with [Now](https://zeit.co/now) and [Surge](https://surge.sh/) or you can choose you favorite deployment option as you would 
-
-Another pro, look at this [RealWorld benchmark](https://medium.freecodecamp.org/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075) to get a feel of how Svelte/Sapper can be very slim compared to React and the like. (Note that it was done with Svelte 2, and right now it is already Svelte 3, so take it with a grain of salt)
-
-### CONS
-
-I think it got traction recently but it still is not widely used so there not much educational material yet. If you can't do with only the tutorial and API documentation, you should wait a bit more.
-
-Also Svelte miss some features like routing (but they should be addressed in the sister framework [Sapper](https://sapper.svelte.dev/) which aims to be a replacement for [Next.js](https://github.com/zeit/next.js) ).
-
-And last but not least, it got some weird syntax choices. The dollar sign `$` has two different uses dependent on context. 
-
-```js
-let count = 0;
-$: doubled = count * 2; // here doubled is a 'derived' value on 'count', it will automatically recalculate itself if count changes
-```
-
-```html
-<p> My name is {$name} </p> 
-<!-- Here $name is a reference to name, a value in a state store -->
-```
-
-I don't like that choice, even so I don't think you can confuse the two of then very often. Note also that the second syntax is a shorthand syntax, you can subscribe manually to values in the store and name them without the `$` so if you really care about that you can opt out (at the price of 3-4lines of manual wiring).
-
-And syntax for conditional in template is also not very sexy: 
-
-```html
-{{ #if condition }}
- <p> Inside the if </p>
-{{ /if}}  
-```
-
-But I guess it's more a personal taste. 
+- [Introduction to Svelte]({{< relref "3_Introduction_to_Svelte.md" >}})
+- [Part1: Start of the tutorial: making a Derivative Idle clone with Svelte]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})
+- **Part2: Going further with Svelte using components and props**: Coming soon!
 
 ## Tutorial
 
-Let's start the Derivative Clicker tutorial :) I'll try to go slowly and introduce concept as they come but you are expected to already know a bit of html, css and some programming concept like variables, functions, loop and recursion. 
+Let's start the Derivative Clicker[^0] tutorial :) I'll try to introduce concept as they come but you are expected to already know a bit of HTML, CSS and some programming concept like variables, functions, loop and recursion. 
 
-*Disclaimer*: It's my first Svelte project so I may do things that are not optimal. 
+For the following tutorial I'll use the Svelte REPL[^4] but you can also follow instructions on the Svelte Getting Started[^8] page  to set yourself up with your favorite editor.
 
-For the following tutorial I'll use the Svelte REPL but you can also follow [Svelte Getting Started](https://svelte.dev/blog/the-easiest-way-to-get-started) to set yourself up in your favorite editor.
+### Disclaimer
+
+A little word of warning, it's my first Svelte project so I may do things that are not optimal.  
+
+Also I will write some invalid HTML (invalid as in not W3C compliant) to not have to use CSS until the very end of the project because it's not the focus of this project. I will point out when I take those shortcuts. 
+
+And also my English is far from perfect so hit me up with a message when you see errors so I can correct it and try to not do it again!
 
 ### Introduction to the game and scope of the tutorial
 
 #### What is Derivative Clicker
 
-Derivative Clicker is an idle game. The idle genre resolve around buying things that generate some form of currency. Then with that currency you can buy more stuff that generate more currency. There is usually no end game, just the pleasure to see your numbers grow bigger and bigger (until the browser can't display your number because it's too big :) ). Sometimes the game continue to generate currency when you are not online but not always (not in this case). 
+Before trying to create a copy of a game, lets talk a bit about it. Derivative Clicker is an idle game. The idle genre resolve around making a number go big, usually by buying things that generate some form of currency. Then with that currency you can buy more stuff that generate more currency. There is usually no end game, just the pleasure to see your numbers grow bigger and bigger (until the browser can't display your number because it's too big :) ). Sometimes the game continue to generate currency even when you are not online but not always (not in this case). 
 
-Here you start with no cash and when you click on a button you gain some cash. Then after clicking a few times, with your hard earned cash you can buy something (I'll call it "building" in the rest of the tutorial) that will generate a little bit of cash every *tick*. There is a *tick* every 1000ms (every 1 second) but as you progress *ticks* can go faster. Then as you progress you can buy more buildings that generate either more cash or more building. (Like russian dolls, there is always an extra layer).
+Here you start with no cash and when you click on a button you gain some cash. Then after clicking a few times, with your hard earned cash you can buy something (I'll call it "building" in the rest of the tutorial) that will generate a little bit of cash every *tick*. There is a *tick* every 1000ms (1 second) but as you progress, *ticks* can go faster, accelerating production. Then as you progress you can buy more buildings that generate either more cash or more building. (Like Russian dolls, there is always an extra layer).
 
-You can also buy upgrades for your buildings that will make then more efficient, less costly or upgrades that will simulate clicks. 
+You can also buy upgrades for your buildings that will make then more efficient, less costly or upgrades that will simulate clicks. (And some games have more elaborate ways of upgrading the game).
 
-Because the cost of building will grow exponentially but the growth of cash production will be less than exponential, at some point we will hit a time wall where we can't buy buildings before a long time. That is where *reset* comes in. The *reset* (or *prestige*) mechanic allow you to reset the game entirely from the start. But why would you do that? Because resetting gives you some form of bonus that helps you progress further into the game. Some elaborate games features more than one *prestige* layer. For our case, *prestige* gives us prestige currency that gives a percentage bonus to our building production. How many prestige currency you get depends on how big your numbers are at the time you reset. The prestige currency is also used to buy some powerful upgrades (for example unlocking new buildings) that allow to progress further. So you have to balance keeping the prestige currency for it's production boost or spending it to gain other bonuses.
+Also because the cost of buildings will grow exponentially but the growth of cash production will be less than exponential, at some point we will hit a time wall where we can't buy new buildings before a long time. That is where *reset* comes in. The *reset* (or *prestige*) mechanic allow you to reset the game entirely from the start. But why would you do that? Because resetting gives you some form of bonus that helps you progress further into the game. Some elaborate games features more than one *prestige* layer. For our case, *prestige* gives us prestige currency that gives a percentage bonus to our building production. How many prestige currency you get depends on how big your numbers are at the time you reset. The prestige currency is also used to buy some powerful upgrades (for example unlocking new buildings) that allow to progress further. So you have to balance keeping the prestige currency for it's production boost or spending it to gain other bonuses.
 
 
 #### What we will aim for
@@ -92,9 +54,9 @@ Because the cost of building will grow exponentially but the growth of cash prod
 - Have some upgrades
 - Have some form of prestige mechanic
 - Have some form of statistics for the game
-- Use Svelte :)
+- Use Svelte :) And discover its many features
 
-Also note that you can peak at the [source code](https://github.com/gzgreg/DerivativeClicker/tree/gh-pages) of the original game (itself forked from [here](https://github.com/Icehawk78/DerivativeClicker/tree/gh-pages)). For this tutorial we won't follow this code, but create a game similar to it from scratch.
+Also note that you can peak at the [source code](https://github.com/gzgreg/DerivativeClicker/tree/gh-pages) of the game (itself forked from [here](https://github.com/Icehawk78/DerivativeClicker/tree/gh-pages)). For this tutorial we won't follow this code, but create a game similar to it from scratch.
 
 ### Hello World
 
@@ -109,9 +71,9 @@ Also note that you can peak at the [source code](https://github.com/gzgreg/Deriv
 <h1>Hello {name}!</h1>
 ```
 
-File in `.svelte` are kind of like `.html`.  They are mostly composed of html tags and components (We will se after how to define our own component). 
+File ending in `.svelte` are kind of like `.html`.  They are mostly composed of HTML tags and components. (We will see after how to define our own components). 
 
-You can also define some logic inside `<script></script>` and reference it inside the html template. Above we declared a variable `name` and gave it the value `world`. Then inside the template we reference it with the syntax `{name}` to inject it's value.
+You can also define some logic inside `<script></script>` and reference it inside the html template. Above we declared a variable `name` and gave it the value `"world"`. Then inside the template we reference it with the syntax `{name}` to inject it's value.
 
 If you use the REPL, you should see on the right side in the `result` pane a big bold **Hello world!**.
 
@@ -119,15 +81,15 @@ If you use the REPL, you should see on the right side in the `result` pane a big
 
 ### Creating the first building
 
-If you recall the little introduction on idle game, building are things that you can buy and then they generate something every tick. (or every X tick, or twice per tick or whatever) 
+If you recall the little introduction on idle games, building are things that you can buy and then they generate something every tick. (or every X tick, or twice per tick or whenever. Here we will start by producing money every tick.) 
 
 So for this first step we need to:
 
 - keep track of cash (our primary currency)
-- keep track of how many numbers of building we bought (cause the price of the building depends on the number of building)
-- create a function that will be used every tick (to gain currency etc)
+- keep track of how many numbers of building we bought (cause the price of the building depends on the number of building, and how much cash is generated each tick is also dependent on how many buildings there are).
+- create a function that will be used every tick (to gain currency)
 
-Let's keep track of cash with a variable `let money = 20` and start with 20 units of it. And by modifying a bit the `Hello World` example, you can show the amount of money.
+Let's keep track of cash in our game : `let money = 20` and start with 20 units of it. And by modifying a bit the `Hello World` example, you can show the amount of money.
 
 ```html
 <!-- App.svelte -->
@@ -138,7 +100,7 @@ Let's keep track of cash with a variable `let money = 20` and start with 20 unit
 <h1> You have {money} $ </h1>
 ```
 
-Next to have a building, we will use a button. If you click on it, you buy it, deducting it's price from your money.
+Next to represent a building, we will use a button. If you click on it, you buy it, deducting it's price from your money.
 
 We need a variable for the price and one for the number of building bought:
 
@@ -175,7 +137,7 @@ We add an event handler to do something when you click on the button. In Svelte 
 
 Will trigger a JS alert each time the button is clicked. 
 
-In our case we want to update our cash, the number of building and the cost of the next building. Let's define a function `updateNumbers` that do exactly that. *Note that for now we use a linear growth function to calculate building cost, bu usually idle game define a cost with exponential growth. We will change that later.*
+In our case we want to update our cash, the number of building and the cost of the next building. Let's define a function `updateNumbers` that do exactly that. *Note that for now we use a linear growth function to calculate building cost, but usually idle games define a cost with exponential growth. We will change that later.
 
 
 ```html
@@ -217,14 +179,12 @@ What we want is to block the button when we have less money than the cost. We co
   <p>{numberOfBuilding} building bought, next one cost {cost}$</p>
 </button>
 ```
-That will work.
-
-But maybe we will need that condition in other places as well, and it is better not to repeat many times the same things. If later we need to change it, we'd have to find all the place we used it. (Spoiler alert: we will need to have that condition in more than one place, and we will also need to change it slitghly later)
-We are gonna use [reactive declarations](https://svelte.dev/tutorial/reactive-declarations). 
+But maybe we will need the boolean condition `cost > money` in other places as well, and it is better not to repeat many times the same logic (see DRY principle). If later on we need to change it, we'd have to find all the places we used it. (Spoiler alert: we will need to have that condition in more than one place, and we will also need to change it slightly later). 
+To solve that little problem, we are gonna use reactive declarations[^19]. 
 
 ### Refactoring using reactive declarations
 
-Reactive declarations are a way to declare variable that depends on other variables.  When the value of the variables they depend on change, their own value will be recomputed (they react to change).
+Reactive declarations are a way to declare variable that depends on other variables.  When the value of the variables they depend on change, their own value will be recomputed (they react to change hence the name).
 
 Here we gonna write one such reactive declaration
 
@@ -239,7 +199,7 @@ Here we gonna write one such reactive declaration
 </script>
 ```
 
-And now we can use it in our button.
+And now we can use it in our button:
 
 ```html
 <!-- App.svelte -->
@@ -247,11 +207,11 @@ And now we can use it in our button.
   <p>{numberOfBuilding} bought, next one cost {cost}$</p>
 </button>
 ```
-Below you can see the result, we no longer can click on the button when we can't afford it.
+Below you can see the result, we can no longer click on the button when we can't afford it.
 
 {{< figure src="/img/blog_3_svelte_no_more_negative_money.png" alt="Money goes into negative">}}
 
-Another place we can use reactive declarations is with the `cost` variable. Remember that to update the cost we use `cost = (numberOfBuilding + 1) * 5;`. That too can be expressed as a reactive declaration.
+Another place we can use reactive declarations is with the `cost` variable. Remember that to update the cost we used `cost = (numberOfBuilding + 1) * 5;`. That too can be expressed as a reactive declaration.
 
 ```html
 <!-- App.svelte -->
@@ -295,7 +255,7 @@ Let's have a look at the full code until now and see how far we are.
   <p>{numberOfBuilding} bought, next one cost {cost}$</p>
 </button>
 ```
-We can buy buildings, can't buy them when we don't have the money, we need now to make them generate money!
+We can buy buildings, can't buy them when we don't have the money. We need now to make them generate money!
 
 ### Make building generate money
 
@@ -305,7 +265,7 @@ We will declare a `tickSpeed` variable that will be the X for the interval for `
 
 We will also declare a variable `buildingProduction` to represent how many money each building produce each tick.
 
-And last we declare a new function `updateMoney` that will update the amount of money we have and trigger a timeOut to get called again after `tickSpeed` millisecond.
+And last we declare a new function `updateMoney` that will update the amount of money we have and trigger a `timeOut` to get called again after `tickSpeed` milliseconds.
 
 ```html
 <!-- App.svelte -->
@@ -327,7 +287,7 @@ And last we declare a new function `updateMoney` that will update the amount of 
 </script>
 ```
 
-And voila! Now when you buy buildings, you should see the money going up each second!
+And *voila*! Now when you buy buildings, you should see the money going up each second!
 
 ### Changes to the UI
 
@@ -346,11 +306,11 @@ In the template we can just had `<p>You gain {numberOfBuilding * buildingProduct
 </button>
 ```
 
-NOTE: yes I inserted two `<p>` inside the `<button`. It is not the recommended way to make two lines of text one below the other in a button but for now it will do. (I checked [w3c validator](https://validator.w3.org) and indeed it is not valid.) 
+NOTE: yes I inserted two `<p>` inside the `<button`. It is not the recommended way to make two lines of text one below the other in a button but for now it will do. (I checked a w3c validator[^20] and indeed it is not valid.) 
 
 Now you can test it, buy a couple buildings and you'll see how much money you get each tick.
 
-But doing that, we introduced some redundancy. We used `numberOfBuilding * buildingProduction` which is already used in the function `updateMoney`. We can use a **reactive declaration** again to not repeat this operation in multiple place, and replace in the code all the place it was used.
+But doing that, we introduced some redundancy. We used `numberOfBuilding * buildingProduction` which is already used in the function `updateMoney`. We can use a reactive declaration again to not repeat this operation in multiple place, and replace in the code all the place it was used.
 
 ```html
 <!-- App.svelte -->
@@ -382,13 +342,13 @@ But doing that, we introduced some redundancy. We used `numberOfBuilding * build
 
 But when you replace everything that way, you get an error: `can't access lexical declaration 'productionPerTick' before initialization`. What is means it that we try to use `productionPerTick` (which rely on other variables) before Svelte has even initialized those variables.
 
-To resolve that problem, we will have to use some **lifecycle** functions.
+To resolve that problem, we will have to use some lifecycle functions.
 
-#### Introducing lifecycle functions and onMount
+#### Introducing lifecycle functions: `onMount`
 
-Svelte (like React and Angular) provides function that you can redefine to customize the comportement of the Components. TODO [tutorial onMount](https://svelte.dev/tutorial/onmount)
+Svelte (like React and Angular) provides function that you can redefine to customize the comportment of the components.
 
-Here we can use onMount to only call the function `updateMoney` (and consequently use `productionPerTick`) only once Svelte has been initialized. (Or rather, once Svelte has initialized the `App` *component*).
+Here we can use `onMount` to only call the function `updateMoney` (and consequently use `productionPerTick`) only once Svelte has been initialized. (Or rather, once Svelte has initialized the `App` *component*).
 
 To be able to use `onMount` we need to import it first. 
 
@@ -411,7 +371,7 @@ To be able to use `onMount` we need to import it first.
 </script>
 ```
 
-Once we do that the error disapear and the application works again. :)
+Once we do that the error disappear and the application works again. :)
 
 For more information on `onMount` and other lifecycle functions, see the [documentation](https://svelte.dev/docs#onMount) and the [onMount tutorial](https://svelte.dev/tutorial/onmount).
 
@@ -522,6 +482,16 @@ Below is the full code:
 
 You can play with the example [in the Svelte REPL](https://svelte.dev/repl/402f808c6f9a4dad9704a9334abbabe8?version=3.4.2) yourself.
 
-You can also [play the game here](http://tuto-derivative-clicker-part1.surge.sh/) (hosted by [Surge](surge.sh)).
+You can also [play the game we made so far here](http://tuto-derivative-clicker-part1.surge.sh/) (hosted by Surge[^21]).
 
-To continue the tutorial, [part2 is the next step]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte_part2.md" >}}) :) We will build more than one building, create components to isolate our logic around buildings and continue to implement the game mechanics.
+To continue the tutorial, **part2: Going further with Svelte using components and props** (coming soon) :) We will build more than one building, create components to isolate our logic around buildings and continue to implement the game mechanics.
+
+[^0]: http://gzgreg.github.io/DerivativeClicker/
+[^1]: https://svelte.dev/
+[^4]: https://svelte.dev/repl/hello-world?version=3.5.1
+[^8]:https://svelte.dev/blog/the-easiest-way-to-get-started
+[^19]: https://svelte.dev/tutorial/reactive-declarations
+
+[^20]: https://validator.w3.org
+[^21]: https://surge.sh/
+
