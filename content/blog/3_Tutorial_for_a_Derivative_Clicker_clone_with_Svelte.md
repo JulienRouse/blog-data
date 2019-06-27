@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial for a Idle game with Svelte (Part1)'
 url: '/blog/tutorial-for-idle-game-svelte-part1'
-date: Sat, 08 Jun 2019 20:00:00 +0000
+date: Sat, 22 Jun 2019 20:00:00 +0000
 draft: false
 tags: [svelte,SPA,game,tutorial,idle]
 featured: false
@@ -13,7 +13,7 @@ summary: "Let's discover Svelte and build a game together."
 
 # Making a Derivative Idle clone with Svelte
 
-This is the first part of a multi part tutorial on making a game with Svelte[^1]. If you have not read it already, I made an introduction to Svelte.
+This is the first part of a multi part tutorial on making a game with Svelte[^1]. (If you have not read it already, I made an introduction to Svelte you can find right below).
 
 - [Introduction to Svelte]({{< relref "3_Introduction_to_Svelte.md" >}})
 - [Part1: Start of the tutorial: making a Derivative Idle clone with Svelte]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})
@@ -21,7 +21,7 @@ This is the first part of a multi part tutorial on making a game with Svelte[^1]
 
 ## Tutorial
 
-Let's start the Derivative Clicker[^0] tutorial :) I'll try to introduce concept as they come but you are expected to already know a bit of HTML, CSS and some programming concept like variables, functions, loop and recursion. 
+Let's start the Derivative Clicker[^0] tutorial :) I'll try to introduce concept as they come but you are expected to already know a bit of HTML, CSS and some programming concepts like variables, functions, loop and recursion. 
 
 For the following tutorial I'll use the Svelte REPL[^4] but you can also follow instructions on the Svelte Getting Started[^8] page  to set yourself up with your favorite editor.
 
@@ -29,17 +29,17 @@ For the following tutorial I'll use the Svelte REPL[^4] but you can also follow 
 
 A little word of warning, it's my first Svelte project so I may do things that are not optimal.  
 
-Also I will write some invalid HTML (invalid as in not W3C compliant) to not have to use CSS until the very end of the project because it's not the focus of this project. I will point out when I take those shortcuts. 
+Also I will write some invalid HTML (invalid as in not W3C compliant) to not have to use CSS until the very end of the tutorial because it's not the focus of this project. I will take care of pointing out when I take those shortcuts. 
 
-And also my English is far from perfect so hit me up with a message when you see errors so I can correct it and try to not do it again!
+And also my English is far from perfect so hit me up with a message at *contact AT julienrouse.com* when you see an error so I can correct it and try to learn from my mistake to not do it again!
 
 ### Introduction to the game and scope of the tutorial
 
 #### What is Derivative Clicker
 
-Before trying to create a copy of a game, lets talk a bit about it. Derivative Clicker is an idle game. The idle genre resolve around making a number go big, usually by buying things that generate some form of currency. Then with that currency you can buy more stuff that generate more currency. There is usually no end game, just the pleasure to see your numbers grow bigger and bigger (until the browser can't display your number because it's too big :) ). Sometimes the game continue to generate currency even when you are not online but not always (not in this case). 
+Before trying to create a copy of a game, lets talk a bit about what is the essence of this particular game. Derivative Clicker is an idle game. The idle genre resolve around making a number go big, usually by buying things that generate some form of currency. Then with that currency you can buy more stuff that generate more currency. There is usually no end game, just the pleasure to see your number grow bigger and bigger (until the browser can't display your number because it's too big :) ). Sometimes the game continue to generate currency even when you are not online but not always (not in this case). 
 
-Here you start with no cash and when you click on a button you gain some cash. Then after clicking a few times, with your hard earned cash you can buy something (I'll call it "building" in the rest of the tutorial) that will generate a little bit of cash every *tick*. There is a *tick* every 1000ms (1 second) but as you progress, *ticks* can go faster, accelerating production. Then as you progress you can buy more buildings that generate either more cash or more building. (Like Russian dolls, there is always an extra layer).
+Here you start with no cash and when you click on a button you gain some cash. Then after clicking a few times, with your hard earned cash you can buy something (I'll call it "building" in the rest of the tutorial) that will generate a little bit of cash every *tick*. There is a *tick* every 1000ms (1 second) but as you progress, *ticks* can go faster, accelerating production. Then as you go further into the game, you can buy more buildings that generate either more cash or more buildings. (Like Russian dolls, there is always an extra layer).
 
 You can also buy upgrades for your buildings that will make then more efficient, less costly or upgrades that will simulate clicks. (And some games have more elaborate ways of upgrading the game).
 
@@ -48,8 +48,8 @@ Also because the cost of buildings will grow exponentially but the growth of cas
 
 #### What we will aim for
 
-- Creating buildings that generate cash
-- Creating buildings that generate other currencies
+- Create buildings that generate cash
+- Create buildings that generate other currencies
 - Create buildings that generate other buildings
 - Have some upgrades
 - Have some form of prestige mechanic
@@ -73,7 +73,7 @@ Also note that you can peak at the [source code](https://github.com/gzgreg/Deriv
 
 File ending in `.svelte` are kind of like `.html`.  They are mostly composed of HTML tags and components. (We will see after how to define our own components). 
 
-You can also define some logic inside `<script></script>` and reference it inside the html template. Above we declared a variable `name` and gave it the value `"world"`. Then inside the template we reference it with the syntax `{name}` to inject it's value.
+You can also define some logic inside `<script></script>` and reference it inside the html template. Above we declared a variable `name` and gave it the value `"world"`. Then inside the template we reference it with the syntax `{name}` to inject its value.
 
 If you use the REPL, you should see on the right side in the `result` pane a big bold **Hello world!**.
 
@@ -100,9 +100,9 @@ Let's keep track of cash in our game : `let money = 20` and start with 20 units 
 <h1> You have {money} $ </h1>
 ```
 
-Next to represent a building, we will use a button. If you click on it, you buy it, deducting it's price from your money.
+Next to represent a building, we will use a button. If you click on it, you buy it, deducting its price from your money.
 
-We need a variable for the price and one for the number of building bought:
+We need two variables: one for the price and one for the number of building bought:
 
 ```html
 <!-- App.svelte -->
@@ -113,7 +113,7 @@ We need a variable for the price and one for the number of building bought:
 </script>
 ```
 
-And then we can use those in the template.
+And then we can use those variable in the template with curly braces syntax `{}` we saw earlier:
 
 ```html
 <!-- App.svelte -->
@@ -122,9 +122,11 @@ And then we can use those in the template.
 </button>
 ```
 
-So far so good. Then we need to actually do something when we click on the button.
+So far so good :)
 
-### Buying a building
+Now we need to actually do something when we click on the button.
+
+### Buying a building  with event and event handler
 
 We add an event handler to do something when you click on the button. In Svelte you can intercept any event with `on:` followed by the event name. Here the event is `click` so we use `on:click={clickHandler}`. `clickHandler` is a function that is called when a click is registered.  For example:
 
@@ -180,13 +182,13 @@ What we want is to block the button when we have less money than the cost. We co
 </button>
 ```
 But maybe we will need the boolean condition `cost > money` in other places as well, and it is better not to repeat many times the same logic (see DRY principle). If later on we need to change it, we'd have to find all the places we used it. (Spoiler alert: we will need to have that condition in more than one place, and we will also need to change it slightly later). 
-To solve that little problem, we are gonna use reactive declarations[^19]. 
+To solve that little problem, we are going to use reactive declarations[^19]. 
 
 ### Refactoring using reactive declarations
 
 Reactive declarations are a way to declare variable that depends on other variables.  When the value of the variables they depend on change, their own value will be recomputed (they react to change hence the name).
 
-Here we gonna write one such reactive declaration
+Here we are going to write one such reactive declaration
 
 ```html
 <!-- App.svelte -->
@@ -230,7 +232,7 @@ We no longer need to update the cost here, reactive declaration does it for us w
 
 ### Mid tutorial recap
 
-Let's have a look at the full code until now and see how far we are.
+Let's have a look at the full code until now and see how far we got.
 
 ```html
 <!-- App.svelte -->
@@ -257,13 +259,13 @@ Let's have a look at the full code until now and see how far we are.
 ```
 We can buy buildings, can't buy them when we don't have the money. We need now to make them generate money!
 
-### Make building generate money
+### Making buildings generates money
 
 To do that, we need to trigger a function every X millisecond. In JS we can use `setTimeout`.
 
 We will declare a `tickSpeed` variable that will be the X for the interval for `setTimeout`. Later on it will allow us to increase or decrease (mostly decrease) the value of `tickSpeed` to accelerate the game. 
 
-We will also declare a variable `buildingProduction` to represent how many money each building produce each tick.
+We will also declare a variable `buildingProduction` to represent how much money each building produce every tick.
 
 And last we declare a new function `updateMoney` that will update the amount of money we have and trigger a `timeOut` to get called again after `tickSpeed` milliseconds.
 
@@ -287,17 +289,17 @@ And last we declare a new function `updateMoney` that will update the amount of 
 </script>
 ```
 
-And *voila*! Now when you buy buildings, you should see the money going up each second!
+And *voilà*! Now when you buy buildings, you should see the money going up each second!
 
 ### Changes to the UI
 
-For the first part we are feature complete but we could add some visual changes.
+For the first part of the tutorial we implemented all the feature we planned to but we could add some visual changes.
 
 #### Add more stats
 
 Now that we earn money each tick, wouldn't that be nice to see how much we earn?
 
-In the template we can just had `<p>You gain {numberOfBuilding * buildingProduction}$ / tick.</p>` to have more information:
+In the template we can just add `<p>You gain {numberOfBuilding * buildingProduction}$ / tick.</p>` to have more information:
 
 ```html
 <button on:click={updateNumbers} disabled={cantBuy}>
@@ -310,7 +312,7 @@ NOTE: yes I inserted two `<p>` inside the `<button`. It is not the recommended w
 
 Now you can test it, buy a couple buildings and you'll see how much money you get each tick.
 
-But doing that, we introduced some redundancy. We used `numberOfBuilding * buildingProduction` which is already used in the function `updateMoney`. We can use a reactive declaration again to not repeat this operation in multiple place, and replace in the code all the place it was used.
+But by doing that, we introduced some redundancy. We used `numberOfBuilding * buildingProduction` which is already used in the function `updateMoney`. We can utilize a reactive declaration again to not repeat this operation in multiple place, and also replace it in the code in all the places it was used.
 
 ```html
 <!-- App.svelte -->
@@ -342,7 +344,7 @@ But doing that, we introduced some redundancy. We used `numberOfBuilding * build
 
 But when you replace everything that way, you get an error: `can't access lexical declaration 'productionPerTick' before initialization`. What is means it that we try to use `productionPerTick` (which rely on other variables) before Svelte has even initialized those variables.
 
-To resolve that problem, we will have to use some lifecycle functions.
+To resolve this problem, we will have to use some lifecycle functions.
 
 #### Introducing lifecycle functions: `onMount`
 
@@ -379,9 +381,9 @@ For more information on `onMount` and other lifecycle functions, see the [docume
 
 And to finish this tutorial, let's add some visual cues for the button. 
 
-We are gonna change the background color for the button and change the mouse cursor depending on if we can buy it.
+We are going to change the background color for the button and change the mouse cursor depending on if we can buy it or not.
 
-We can style elements directly into our `.svelte` files with the `<style>` tag.  We are defining a default style for the `<button>` tag then a style for `<button>` that have the `cantbuy` class
+We can style elements directly into our `.svelte` files with the `<style>` tag.  We are defining a default style for the `<button>` tag then a style for `<button>` that has the `cantbuy` class
 
 ```html
 <!-- App.svelte -->
@@ -480,7 +482,7 @@ Below is the full code:
 </button>
 ```
 
-You can play with the example [in the Svelte REPL](https://svelte.dev/repl/402f808c6f9a4dad9704a9334abbabe8?version=3.4.2) yourself.
+You can play with the example [in the Svelte REPL](https://svelte.dev/repl/4181423ac05b4041ad9e449c666828d5?version=3.4.2) yourself.
 
 You can also [play the game we made so far here](http://tuto-derivative-clicker-part1.surge.sh/) (hosted by Surge[^21]).
 

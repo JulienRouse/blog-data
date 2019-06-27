@@ -14,7 +14,7 @@ summary: "Adding upgrades to the game."
 
 ##  Introduction
 
-This article is the third part of a tutorial aiming at discovering Svelte while building a game. I also wrote a very short post on Svelte and the idea behind this tutorial. Below you can find the links to check those posts or other parts of the tutorial.
+This article is the third part of a tutorial aiming at discovering Svelte while building a game. I also wrote a short post on Svelte and the idea behind this tutorial. Below you can find the links to check those posts or other parts of the tutorial.
 
 - [introduction to Svelte]({{< relref "3_Introduction_to_Svelte.md" >}})
 - [part1: Start of the tutorial: making a Derivative Idle clone with Svelte]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})

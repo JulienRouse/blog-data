@@ -27,9 +27,9 @@ The project went to version 3 a month ago (early may 2019), I think it's a good 
 
 The Svelte tutorial[^6] is great, it takes about an hour or so and is very well done. It uses the Svelte REPL[^7] and it introduces concepts very smoothly. Also it uses mostly the same concepts as React, Vue[^8] and Angular. If you know at least one of those you should pick it up quickly. (Component, reactive bindings, props, event forwarding, state store, component life cycle and slots to name a few concepts used) .
 
-Also the Svelte website features a very nice REPL that you can use to test Svelte app without installing anything. When you are ready for the next step, the *get started section*[^9] is handy. It's just a matter of cloning a template from a git[^10] repository and use the tools you are used to: `npm`[^11] or `yarn`[^12], `webpack`[^13], `rollup`[^14] or `browserify`[^15]. And to deploy, there are instructions for fast deploy with Now[^16] and Surge[^17] or you can choose you favorite deployment option as you would for any other JS or TypeScript project.
+Also the Svelte website features a very nice REPL that you can use to test Svelte app without installing anything. When you are ready for the next step, the *get started section*[^9] is handy. It's just a matter of cloning a template from a git[^10] repository and use the tools you are used to: `npm`[^11] or `yarn`[^12], `webpack`[^13], `rollup`[^14] or `browserify`[^15]. And for the deployment, there are instructions a quick setup with Now[^16] and Surge[^17] or you can choose you favorite deployment option as you would for any other JS or TypeScript project.
 
-Another pro, look at this article for a [RealWorld benchmark](https://medium.freecodecamp.org/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075) to get a feel of how Svelte can be very slim compared to its concurrent. (Note that the benchmark was done with Svelte v2, and right now it is already Svelte v3, so take it with a grain of salt).
+Another pro, look at this article for a [RealWorld benchmark](https://medium.freecodecamp.org/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075) to get a feel of how Svelte can be very slim compared to its rivals. (Note that the benchmark was done with Svelte v2, and right now it is already Svelte v3, so take it with a grain of salt).
 
 ### CONS
 
@@ -37,7 +37,7 @@ I think it got traction recently but it still is not widely used so there not mu
 
 Also Svelte miss features like routing (but this is apparently addressed in the sister framework Sapper[^18] which aims to be a replacement for Next.js[^19]).
 
-And last but not least, it got some weird syntax choices. The dollar sign `$` has two different uses dependent on context. 
+And last but not least, it has some weird syntax choices. The dollar sign `$` has two different uses dependent on the context. 
 
 ```js
 let count = 0;
@@ -59,11 +59,11 @@ And syntax for conditional in template is also not very sexy:
 {{ /if}}  
 ```
 
-But I guess it's more a personal taste. 
+But I guess it's more a matter of personal taste. 
 
 ## Practicing Svelte by building a game
 
-To continue onto the first part of the tutorial you can go follow this link: [Start of the tutorial: making a Derivative Idle clone with Svelte]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})
+To continue onto the first part of the tutorial you can follow this link: [Start of the tutorial: making a Derivative Idle clone with Svelte]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})
 
 [^1]: https://svelte.dev/
 [^2]: http://gzgreg.github.io/DerivativeClicker/
