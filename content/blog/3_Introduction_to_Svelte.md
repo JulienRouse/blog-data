@@ -1,7 +1,7 @@
 ---
 title: 'Introduction to Svelte'
 url: '/blog/introduction-to-svelte'
-date: Sat, 08 Jun 2019 19:00:00 +0000
+date: Sat, 15 Jun 2019 19:00:00 +0000
 draft: false
 tags: [svelte,SPA]
 featured: true
