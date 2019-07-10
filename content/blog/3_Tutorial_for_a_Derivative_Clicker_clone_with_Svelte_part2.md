@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial for an Idle game with Svelte (Part2)'
 url: '/blog/tutorial-for-idle-game-svelte-part2'
-date: Sat, 15 Jun 2019 20:00:00 +0000
+date: Sat, 29 Jun 2019 20:00:00 +0000
 draft: true
 tags: [svelte,SPA,game,tutorial,idle]
 featured: false
@@ -13,7 +13,7 @@ summary: "Diving deeper into Svelte, continuing our idle game."
 
 ## Introduction
 
-This article is the second part of a tutorial aiming at discovering Svelte while building a game. I also wrote a very short post on Svelte and the idea behind this tutorial. Below you can find the links to check those posts or other parts of the tutorial.
+This article is the second part of a tutorial aiming at discovering Svelte[1] while building a game. I also wrote a very short post on Svelte and the idea behind this tutorial. Below you can find the links to check those posts or other parts of the tutorial.
 
 - [introduction to Svelte]({{< relref "3_Introduction_to_Svelte.md" >}})
 - [part1: Start of the tutorial: making a Derivative Idle clone with Svelte]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})
@@ -46,7 +46,7 @@ Try it yourself, it makes a second building. The problem is that the two buildin
 
 We need a way to encapsulate those information locally to have each building handle this for itself.
 
-And that is what components are for! (It's the same concept in React and Angular). When you need to repeat the same independent elements (with slight variations) in different places, components are the way to go. They are also a nice way to have *building block* (think Lego) for your application. Usually you can have big components for the header, footer and main page. Then you can have smaller components like forms and menus that you can reuse in bigger components. And you can also compose your smaller components from even smaller components. It creates a tree architecture, with the root being often named `App`, the main entry point to your app, and then the leaf and nodes are other components used to build your app. 
+And that is what components are for! (It's the same concept in React[2] and Angular[3]). When you need to repeat the same independent elements (with slight variations) in different places, components are the way to go. They are also a nice way to have *building block* (think Lego) for your application. Usually you can have big components for the header, footer and main page. Then you can have smaller components like forms and menus that you can reuse in bigger components. And you can also compose your smaller components from even smaller components. It creates a tree architecture, with the root being often named `App`, the main entry point to your app, and then the leaf and nodes are other components used to build your app. 
 
 To create one,  you need to create a `.svelte` file. (You can see that `App.svelte` is our root component here).Then inside the component you can declare some logic inside the `<script>` tag, some style inside the `<style>` tag and then a html template. The script and style part are local to the component by default. You can declare a new component `Test.svelte` that look like that:
 
@@ -186,7 +186,7 @@ And inside the `Building.svelte` we have now:
 
 You can see we have kept only one `<button>` inside `Building.svelte` but we have inserted `<Building></Building>` twice in `App.svelte` to have two independent buildings.
 
-That's great! But as usual, if you test if, you'll see a new problem. To highlight it even more, let's alter slightly the building to show for each building their `money` variable:
+That's great! But if you test if, you'll see a new problem. To highlight, let's alter slightly the building to show for each building their `money` variable:
 
 ```html
 <!-- Building.svelte -->
@@ -198,11 +198,11 @@ That's great! But as usual, if you test if, you'll see a new problem. To highlig
 </button>
 ```
 
-When you click on the buildings, you see that they are independent, but a bit too much! They don't share a common money value anymore, each one use its own, and when they produce money, it only goes to their own money value as well. That is not what we want. We would like for them to have a shared `money` value, and then handle the rest of their state independently. 
+When you click on the buildings, you see that they are independent, but a bit too much! They don't share a common `money` value anymore, each one use its own, and when they produce, it only goes to their own `money` stash as well. That is not what we want. We would like for them to have a shared `money` value, and then handle the rest of their state independently. 
 
 ### Using the store to handle global state
 
-One way to have some global state that can be shared among components is to have a *store* with value that components can subscribe to. They can also update the value if you allow them to, and any change to the value are propagated back to other component subscribing to that value as well. It is the same idea that React/Redux uses (or Reagent/re-frame[^1] in the ClojureScript ecosystem) .
+One way to have some global state that can be shared among components is to have a *store* with value that components can subscribe to. They can also update the value if you allow them to, and any change to the value are propagated back to other component subscribing to that value as well. It is the same idea that React/Redux uses (or Reagent/re-frame[4] in the ClojureScript ecosystem) .
 
 Let's create our store, we need a JS file that we will call `store.js` and put some code in it: (I use `/* store.js */` instead of `<!-- store.js -->` to show you that the code belongs to `store.js` because it's no longer a template file, but a proper JS file. It allows you to copy paste my snippet without having an error into your editor.)
 
@@ -832,4 +832,4 @@ We will continue in the next part: Coming soon.
 
 You can also [play with the project in the Svelte REPL](https://svelte.dev/repl/230b7ab7fe774b31b1936a2aa2ebf050?version=3.4.2) or [play the game made so far](tuto-derivative-clicker-part2.surge.sh) (hosted by Surge) .
 
-[^1]: https://github.com/Day8/re-frame
+[^999]: https://github.com/Day8/re-frame

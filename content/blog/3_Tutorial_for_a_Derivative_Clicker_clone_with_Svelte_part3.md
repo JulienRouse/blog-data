@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial for a Idle game with Svelte (Part3)'
+title: 'Tutorial for an Idle game with Svelte (Part3)'
 url: '/blog/tutorial-for-idle-game-svelte-part3'
 date: Sat, 29 Jun 2019 20:00:00 +0000
 draft: true
