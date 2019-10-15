@@ -2,7 +2,7 @@
 title: 'Tutorial for an Idle game with Svelte (Part2)'
 url: '/blog/tutorial-for-idle-game-svelte-part2'
 date: Sat, 12 Oct 2019 20:00:00 +0000
-draft: false
+draft: true
 tags: [svelte,SPA,game,tutorial,idle]
 featured: false
 toc: true
@@ -27,7 +27,7 @@ In this part we will learn how to use *components*, *props* and a *state store* 
 
 Right now we have one building producing money. That's a start but it is not enough. What we want now is to make many more buildings.
 
-One way to do that would be to copy paste the following code to add a new building:
+One way to do that would be to copy-paste the following code to add a new building:
 
 ```html
 <-- App.svelte -->
@@ -42,13 +42,13 @@ One way to do that would be to copy paste the following code to add a new buildi
 </button>
 ```
 
-Try it yourself, it makes a second building. The problem is that the two buildings are identical, and they share their internal state. The number of buildings bought, the cost of it, how much money it generates each tick...
+Try it yourself, it makes a second building. The problem is that the two buildings are identical, and they share their internal state. The number of building bought, the cost of it, how much money it generates each tick...
 
-We need a way to encapsulate that information locally to have each building handle this for itself.
+We need a way to encapsulate those information locally to have each building handle this for itself.
 
-And that is what components are for! (It's the same concept in React[2] and Angular[3]) When you need to repeat the same independent elements (with slight variations) in different places, components are the way to go. They are also a nice way to have *building block* (think Lego) for your application. Usually you can have big components for the header, footer and main page. Then you can have smaller components like forms and menus that you can reuse in bigger components. And you can also compose your smaller components from even smaller components. It creates a tree architecture, with the root being often named `App`, the main entry point to your app, and then the leaf and nodes are other components used to build your app. 
+And that is what components are for! (It's the same concept in React[2] and Angular[3]). When you need to repeat the same independent elements (with slight variations) in different places, components are the way to go. They are also a nice way to have *building block* (think Lego) for your application. Usually you can have big components for the header, footer and main page. Then you can have smaller components like forms and menus that you can reuse in bigger components. And you can also compose your smaller components from even smaller components. It creates a tree architecture, with the root being often named `App`, the main entry point to your app, and then the leaf and nodes are other components used to build your app. 
 
-To create one,  you need to create a `.svelte` file. (You can see that `App.svelte` is our root component here).Then inside the component you can declare some logic inside the `<script>` tag, some style inside the `<style>` tag and then an html template. The script and style part are local to the component by default. You can declare a new component `Test.svelte` that look like that:
+To create one,  you need to create a `.svelte` file. (You can see that `App.svelte` is our root component here).Then inside the component you can declare some logic inside the `<script>` tag, some style inside the `<style>` tag and then a html template. The script and style part are local to the component by default. You can declare a new component `Test.svelte` that look like that:
 
 ```html
 <!-- Test.svelte -->
@@ -96,9 +96,9 @@ You see that even so we declared a red background for `<button>`, because we dec
 
 Let's go back to making a component for our buildings. You can delete `Test.svelte`.  You can also delete in `App.svelte` the import to `Test.svelte` and the `<Test></Test>` code in the template.
 
-Now let's create a component for our building. Create a file named `Building.svelte` and we are gonna remove every part relating to our building from `App.svelte` to put it inside `Building.svelte`.
+Now let's create a component for our building. Create a file named `Building.svelte` and we are gonna remove every parts relating to our building from `App.svelte` to put it inside `Building.svelte`.
 
- We are gonna remove everything from `App.svelte` except we are going to import the Building component, keep the declaration for money and in the template keep the title and insert two Building components.
+ We are gonna remove everything from `App.svelte` except we gonna import the Building component, keep the declaration for money and in the template keep the title and insert two Building components.
 
 ```html
 <!-- App.svelte -->
@@ -202,7 +202,7 @@ When you click on the buildings, you see that they are independent, but a bit to
 
 ### Using the store to handle global state
 
-One way to have some global state that can be shared among components is to have a *store* with values that components can subscribe to. They can also update the values if you allow them to, and any change to the values are propagated back to other components subscribing to those values as well. It is the same idea that React/Redux uses (or Reagent/re-frame[4] in the ClojureScript ecosystem) .
+One way to have some global state that can be shared among components is to have a *store* with value that components can subscribe to. They can also update the value if you allow them to, and any change to the value are propagated back to other component subscribing to that value as well. It is the same idea that React/Redux uses (or Reagent/re-frame[4] in the ClojureScript ecosystem) .
 
 Let's create our store, we need a JS file that we will call `store.js` and put some code in it: (I use `/* store.js */` instead of `<!-- store.js -->` to show you that the code belongs to `store.js` because it's no longer a template file, but a proper JS file. It allows you to copy paste my snippet without having an error into your editor.)
 
@@ -237,7 +237,7 @@ In `App.svelte`, we need to import it, remove the local variable declaration and
 
 #### Read from the store
 
-To reference a value from the store, you prepend the dollar character `$` before its name. Here to access the value of `money` in the template we use `$money`. What it does in reality is auto-subscribe to the store value, and unsubscribe to it when the component is destroyed using the `onDestroy` lifecycle functions. `onDestroy` is kind of the opposite of `onMount`, it is called just after the component is unmounted from the DOM.
+To reference a value from the store, you prepend the dollar sign `$` before it's name. Here to access the value of `money` in the template we use `$money`. What it does in reality is auto-subscribe to the store value, and unsubscribe to it when the component is destroyed using the `onDestroy` lifecycle functions. `onDestroy` is kind of the opposite of `onMount`, it is called just after the component is unmounted from the DOM.
 
 You can also opt out of the automatic subscribe and unsubscribe by doing it yourself, which allow more control over it. Let see what it would have looked like:
 
@@ -268,14 +268,14 @@ You can also opt out of the automatic subscribe and unsubscribe by doing it your
 
 #### Write to the store (if the value is a `writable`)
 
-You can't update the value of the store like this: `$money += 1`. You need to use the methods `update` or `set`. For example, if you want to update the value of money to add 1:
+You can't update the value of the store like this: `$money += 1`. You need to use the methods `update` or `set`. For example if you want to update the value of money to add 1:
 
 ```js
 // n refer to the old value of money, and n + 1 will be the new value 
 money.update(n => n + 1)
 ```
 
-And if you want to give a totally new value to it, you can use `set`:
+And if you want to give a totally new value to it you can use `set`:
 
 ```js
 // set money to the greatest number ever
@@ -297,7 +297,7 @@ function updateMoney(n){
 }
 ```
 
-But doing so, we need to rename the old `updateMoney`  that was launching the `setTimeout` to `launchSetTimeout`. The name was not good before, and it is still not good, if you have any suggestion, I'll gladly take it! And we can replace every instance where we add `money += something;` by `updateMoney(something);`.  After all the transformation, the code looks like that (keeping only the parts that changed): 
+But doing so, we need to rename the old `updateMoney`  that was launching the `setTimeout` to `launchSetTimeout`. The name was not good before, and it is still not good, if you have any suggestion, I'll gladly take it! And we can replace every instance where we add `money += something;` by `updateMoney(something);`.  After all the transformation the code look like that (keeping only the parts that changed): 
 
 ```html
 <!-- Building.svelte-->
@@ -398,20 +398,20 @@ And here is the result:
 
 Using props will allow us to customize a little more each building.
 
-We can now change many aspects of them like:
+We can now change many aspect of them like :
 
 - their initial cost
 - their initial number (we can imagine starting off with a few buildings already built after buying an upgrade)
 - what they produce. Right now it's money but they could produce another currency or even other buildings!
-- what they cost. Their cost could be another currency, another building or a combination of those. (Or even cost tick, accelerating or slowing down the game as you buy this building)
-- they could also have a maximum number of units. (Example no more than 30 "Combinatorics" buildings and no limit for the "1th Derivative" building).
+- what they cost. Their cost could be another currency, another building or a combination of those. (Or even cost tick, accelerating or slowing down the game a you buy this building)
+- they could also have a maximum number of unit. (Example no more than 30 "Combinatorics" buildings and no limit for the "1th Derivative" building).
 - And a lot more!
 
 As a starting point, let's change what they produce.
 
 ### Building producing proofs
 
-In the original *Derivative Clicker* game, the primary currency is money but there is a secondary currency named **proofs** that can be produced and is used to buy powerful buildings. (It is also one of the two elements determining the amount of prestige currency you earn when you use the reset/prestige mechanic.).
+In the original *Derivative Clicker* game, the primary currency is money but there is a secondary currency named **proofs** that can be produced and is used to buy powerful buildings. (It is also one of the two element determining the amount of prestige currency you earn when you use the reset/prestige mechanic.).
 
 Let's implement proof :)
 
@@ -555,7 +555,7 @@ In `App.svelte`, we can use the function as well:
 ...
 ```
 
-If you follow closely, you may have noticed that the currency for the cost of the building is still hardcoded as `$` and not `currencyToString(money)`. It's because for now we have not looked into buying building with other currencies than money. We will change it when times come to implement that feature.
+If you follow closely, you may have noticed that the currency for the cost of the building is still hardcoded as `$` and not `currencyToString(money)`. It's because for now we have not looked into buying building with other currency than money. We will change it when times come to implement that feature.
 
 Note also that `currencyToString()` might possibly have been a component. (And that might have been a better implementation choice, I'm not sure). Try it out if you want!   
 
