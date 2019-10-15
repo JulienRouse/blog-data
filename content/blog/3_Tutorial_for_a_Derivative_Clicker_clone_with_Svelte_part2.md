@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial for an Idle game with Svelte (Part2)'
 url: '/blog/tutorial-for-idle-game-svelte-part2'
-date: Sat, 29 Jun 2019 20:00:00 +0000
+date: Sat, 12 Oct 2019 20:00:00 +0000
 draft: true
 tags: [svelte,SPA,game,tutorial,idle]
 featured: false
@@ -832,4 +832,4 @@ We will continue in the next part: Coming soon.
 
 You can also [play with the project in the Svelte REPL](https://svelte.dev/repl/230b7ab7fe774b31b1936a2aa2ebf050?version=3.4.2) or [play the game made so far](tuto-derivative-clicker-part2.surge.sh) (hosted by Surge) .
 
-[^999]: https://github.com/Day8/re-frame
+[^4]: https://github.com/Day8/re-frame

@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial for an Idle game with Svelte (Part3)'
 url: '/blog/tutorial-for-idle-game-svelte-part3'
-date: Sat, 29 Jun 2019 20:00:00 +0000
+date: Sat, 18 Oct 2019 20:00:00 +0000
 draft: true
 tags: [svelte,SPA,game,tutorial,idle]
 featured: false
@@ -676,7 +676,6 @@ If you want to go further and see if you understood how the game works, here is 
 
 ## What's next?
 
-Next time we will try our hands at implementing a prestige layer :) If you did not remember from the introduction or did not read it, you can go read about what is a prestige layer in the [introduction post]({{< relref "3_Introduction_to_Svelte.md" >}}).
+Next article will be the conclusion on this tutorial, with resources for going further and my opinion on Svelte so far.
 
 The next part is here: COMING SOON
-
