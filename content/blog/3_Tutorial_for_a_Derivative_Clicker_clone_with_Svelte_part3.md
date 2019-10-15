@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial for an Idle game with Svelte (Part3)'
 url: '/blog/tutorial-for-idle-game-svelte-part3'
-date: Sat, 29 Jun 2019 20:00:00 +0000
+date: Sat, 19 Oct 2019 20:00:00 +0000
 draft: true
 tags: [svelte,SPA,game,tutorial,idle]
 featured: false
@@ -671,8 +671,8 @@ You can also play with the game and the code in the [Svelte REPL](https://svelte
 
 If you want to go further and see if you understood how the game works, here is some elements you can try to add to the game:
 
--  another tier1 building that cost `proof`  and generate money(and called "Computer" if you want to follow closely Derivative Clicker).
-- another tier2 building that costs `proof` and generates `Computer` (see the point above)  called "Assembly line"
+-  another tier1 building that cost `proof`  and generate money(called "Computer" if you want to follow closely Derivative Clicker).
+- another tier2 building that costs `proof` and generates `Computer` (see the point above)  called "Assembly line".
 
 ## What's next?
 
