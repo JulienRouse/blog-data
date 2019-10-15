@@ -15,9 +15,10 @@ summary: "Let's discover Svelte and build a game together."
 
 This is the first part of a multi part tutorial on making a game with Svelte[^1]. (If you have not read it already, I made an introduction to Svelte you can find right below).
 
-- [Introduction to Svelte]({{< relref "3_Introduction_to_Svelte.md" >}})
-- [Part1: Start of the tutorial: making a Derivative Idle clone with Svelte]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})
-- **Part2: Going further with Svelte using components and props**: Coming soon!
+- [introduction to Svelte]({{< relref "3_Introduction_to_Svelte.md" >}})
+- [part1: Start of the tutorial: making a Derivative Idle clone with Svelte]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})
+- [part2: Going further with Svelte using components and props]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte_part2.md" >}})
+- [part3: Adding upgrades to the game]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte_part3.md" >}})
 
 ## Tutorial
 
