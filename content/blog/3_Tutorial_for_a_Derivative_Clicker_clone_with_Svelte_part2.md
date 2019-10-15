@@ -18,6 +18,7 @@ This article is the second part of a tutorial aiming at discovering Svelte[1] wh
 - [introduction to Svelte]({{< relref "3_Introduction_to_Svelte.md" >}})
 - [part1: Start of the tutorial: making a Derivative Idle clone with Svelte]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})
 - [part2: Going further with Svelte using components and props]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte_part2.md" >}})
+- [part3: Adding upgrades to the game]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte_part3.md" >}})
 
 ## Objectives for this part
 
