@@ -13,7 +13,7 @@ summary: "Diving deeper into Svelte, continuing our idle game."
 
 ## Introduction
 
-This article is the second part of a tutorial aiming at discovering Svelte[1] while building a game. I also wrote a very short post on Svelte and the idea behind this tutorial. Below you can find the links to check those posts or other parts of the tutorial.
+This article is the second part of a tutorial aiming at discovering Svelte while building a game. I also wrote a very short post on Svelte and the idea behind this tutorial. Below you can find the links to check those posts or other parts of the tutorial.
 
 - [introduction to Svelte]({{< relref "3_Introduction_to_Svelte.md" >}})
 - [part1: Start of the tutorial: making a Derivative Idle clone with Svelte]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})
@@ -202,7 +202,7 @@ When you click on the buildings, you see that they are independent, but a bit to
 
 ### Using the store to handle global state
 
-One way to have some global state that can be shared among components is to have a *store* with value that components can subscribe to. They can also update the value if you allow them to, and any change to the value are propagated back to other component subscribing to that value as well. It is the same idea that React/Redux uses (or Reagent/re-frame[4] in the ClojureScript ecosystem) .
+One way to have some global state that can be shared among components is to have a *store* with value that components can subscribe to. They can also update the value if you allow them to, and any change to the value are propagated back to other component subscribing to that value as well. It is the same idea that React/Redux uses (or Reagent/re-frame[^4] in the ClojureScript ecosystem) .
 
 Let's create our store, we need a JS file that we will call `store.js` and put some code in it: (I use `/* store.js */` instead of `<!-- store.js -->` to show you that the code belongs to `store.js` because it's no longer a template file, but a proper JS file. It allows you to copy paste my snippet without having an error into your editor.)
 
@@ -673,7 +673,7 @@ export function currencyToString(c){
 
 To be fair, the UI needs a lot more fixing but it will do for now ;)
 
-By doing this we introduced a ~bug~ feature with the costs of the buildings, if you start by buying a building that produces another building, this building's costs will go up even so we did not buy any manually. We will ~fix this bug~ reverse this feature in the next tutorial when we will implement upgrades.
+By doing this we introduced a ~~bug~~ feature with the costs of the buildings, if you start by buying a building that produces another building, this building's costs will go up even so we did not buy any manually. We will ~~fix this bug~~ reverse this feature in the next tutorial when we will implement upgrades.
 
 ## Recap
 
