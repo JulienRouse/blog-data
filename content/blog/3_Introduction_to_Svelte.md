@@ -15,7 +15,7 @@ I wanted to try out Svelte[^1] so I made a little clone of a game called Derivat
 
 - [introduction to Svelte]({{< relref "3_Introduction_to_Svelte.md" >}})
 - [part1: Start of the tutorial: making a Derivative Idle clone with Svelte]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte.md" >}})
-- **part2: Going further with Svelte using components and props**: Coming soon
+- [part2: Going further with Svelte using components and props]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte_part2.md" >}})
 
 ## Svelte
 
