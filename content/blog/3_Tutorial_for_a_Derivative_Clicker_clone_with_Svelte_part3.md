@@ -7,7 +7,6 @@ tags: [svelte,SPA,game,tutorial,idle]
 featured: false
 toc: true
 summary: "Adding upgrades to the game."
-
 ---
 
 # Part3: Adding upgrades to the game.

@@ -1,3 +1,4 @@
+---
 title: 'Docker Workshop'
 url: '/blog/docker-workshop'
 date: Sat, 01 Jan 2019 19:00:00 +0000
@@ -6,6 +7,7 @@ tags: [Docker,Introduction, ]
 featured: false
 toc: true
 summary: "Recap about a Docker workshop"
+---
 
 # Workshop
 
