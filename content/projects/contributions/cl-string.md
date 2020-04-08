@@ -13,5 +13,7 @@
 First contribution to another project on Github ever! :) 
 
 It was very small, the library was a very small and new library that wanted to groups lots of functionalities pertaining to strings for Common Lisp.
+
 The creator/maintener asked for help on the lisp subreddit and I gave it a try.
-It was a good way to get my feet wet, a very small project with a responsive maintener that took the time to explains things to me on how to contribute on Github and such.
+
+It was a good way to get my feet wet, a very small project with a responsive maintainer that took the time to explains things to me on how to contribute on Github and such.
