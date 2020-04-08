@@ -1,7 +1,7 @@
 ---
 title: 'Rust, TLA+, Aesthetics and more'
 url: '/blog/rust_tla+_and_more'
-date: Sat, 05 Apr 2020 19:00:00 +0000
+date: Sun, 05 Apr 2020 19:00:00 +0000
 draft: false
 tags: [Rust,TLA+,Book,Aesthetics]
 featured: true
