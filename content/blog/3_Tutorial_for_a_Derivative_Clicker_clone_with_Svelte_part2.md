@@ -829,8 +829,8 @@ There are quite a few things to implement still:
 - Options (Save, Export Save, Load Save, Stats, number formatting
 - Balancing the game
 
-We will continue in the next part: Coming soon.
+We will continue in the next part:[part3: Adding upgrades to the game]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte_part3.md" >}}).
 
-You can also [play with the project in the Svelte REPL](https://svelte.dev/repl/230b7ab7fe774b31b1936a2aa2ebf050?version=3.4.2) or [play the game made so far](tuto-derivative-clicker-part2.surge.sh) (hosted by Surge) .
+You can also [play with the project in the Svelte REPL](https://svelte.dev/repl/230b7ab7fe774b31b1936a2aa2ebf050?version=3.4.2) or [play the game made so far](http://tuto-derivative-clicker-part2.surge.sh) (hosted by Surge) .
 
 [^4]: https://github.com/Day8/re-frame
