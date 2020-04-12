@@ -487,7 +487,7 @@ You can play with the example [in the Svelte REPL](https://svelte.dev/repl/41814
 
 You can also [play the game we made so far here](http://tuto-derivative-clicker-part1.surge.sh/) (hosted by Surge[^21]).
 
-To continue the tutorial, **part2: Going further with Svelte using components and props** (coming soon) :) We will build more than one building, create components to isolate our logic around buildings and continue to implement the game mechanics.
+To continue the tutorial, [part2: Going further with Svelte using components and props]({{< relref "3_Tutorial_for_a_Derivative_Clicker_clone_with_Svelte_part2.md" >}}) :) We will build more than one building, create components to isolate our logic around buildings and continue to implement the game mechanics.
 
 [^0]: http://gzgreg.github.io/DerivativeClicker/
 [^1]: https://svelte.dev/
