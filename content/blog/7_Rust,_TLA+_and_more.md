@@ -3,7 +3,7 @@ title: 'Rust, TLA+, Aesthetics and more'
 url: '/blog/rust_tla+_and_more'
 date: Sun, 05 Apr 2020 19:00:00 +0000
 draft: false
-tags: [Rust,TLA+,Book,Aesthetics]
+tags: [rust,tla+,book,aesthetics]
 featured: true
 toc: true
 summary: "Let's talk a bit about Rust, TLA+, Aesthetics in programming and a few more things."
