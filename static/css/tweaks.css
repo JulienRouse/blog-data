@@ -2,6 +2,7 @@
   margin: 0 auto;
 }
 
+
 .devicons{
   font-size:1.5em;
       vertical-align: sub;
@@ -109,5 +110,15 @@ div.skills-heading{
 }
 /* Fix responsive width for blog posts */
 .my-auto {
-	width: 100%
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+/* Fix space after code sample */
+.highlight{
+	margin-bottom: 1em;
+}
+/* Fix space after table */
+table{
+	margin-bottom: 1em;
 }
