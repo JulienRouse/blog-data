@@ -127,7 +127,7 @@ And remember:
 
 ### Bonus: resources to dig deeper
 
-- The original paper that first described mutation testing: [R. A. DeMillo, R. J. Lipton and F. G. Sayward, "Hints on Test Data Selection: Help for the Practicing Programmer," in *Computer*, vol. 11, no. 4, pp. 34-41, April 1978, doi: 10.1109/C-M.1978.218136.](You can also also read the original paper named https://www.researchgate.net/publication/2957629_Hints_on_Test_Data_Selection_Help_for_the_Practicing_Programmer)
+- The original paper that first described mutation testing: [R. A. DeMillo, R. J. Lipton and F. G. Sayward, "Hints on Test Data Selection: Help for the Practicing Programmer," in *Computer*, vol. 11, no. 4, pp. 34-41, April 1978, doi: 10.1109/C-M.1978.218136.](https://www.researchgate.net/publication/2957629_Hints_on_Test_Data_Selection_Help_for_the_Practicing_Programmer)
 - If you are interesting to know a bit more about different techniques and different tradeoffs to implement mutation testing, the [PIT](https://pitest.org/) library (Java) has a good overview on [mutant generation](https://pitest.org/java_mutation_testing_systems/#mutant-generation), [test selection](https://pitest.org/java_mutation_testing_systems/#test-selection), [mutant insertion](https://pitest.org/java_mutation_testing_systems/#mutant-insertion) and [mutant detection](https://pitest.org/java_mutation_testing_systems/#mutant-detection).
 - A [Kata](https://github.com/vmzakharov/mutate-test-kata) (using Java) to see and test yourself the fact that coverage is not a reliable metric, and practicing hand-on to fix tests.
 - The [English Wikipedia page](https://en.wikipedia.org/wiki/Mutation_testing) on mutation testing
