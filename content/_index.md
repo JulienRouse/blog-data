@@ -9,4 +9,4 @@ outputs:
 - rss
 - json
 ---
-<p> Learn something new everyday.</p>
+<p> I break things often and sometimes I manage to fix them. </p>
