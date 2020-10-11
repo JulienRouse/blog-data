@@ -6,7 +6,7 @@ draft: false
 tags: [code-review, improving]
 featured: false
 toc: true
-summary: 'TODO'
+summary: 'Trying to improve the code review process when number of developer increase.'
 ---
 
 # Scaling Code Review
