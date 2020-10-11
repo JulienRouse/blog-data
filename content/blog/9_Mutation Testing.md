@@ -48,6 +48,10 @@ Then you repeat the process of introducing another mutation from the original co
 
 Rinse and repeat a lot, then you count how many mutant you killed in relation to how many were produced. This ratio is called the mutation score, and should be as close to 1 as possible. Mutation testing allows to be more confident in the test you write.
 
+There are two main assumption behind mutation testing, let's see what they are:
+
+The first one is the *competent programmer* hypotheses. It states that most bugs introduced by an experienced programmer into a codebase are small syntactic errors. The second one is the *coupling effect* hypotheses. It asserts that simple faults can create other faults/bugs in an emergent/cascading fashion.
+
 ## Mutation operator
 
 The changes in the code (replacing `==` by `!=` like in the first example)  are called *mutations*, and they are defined by *mutation operator*. There are many different families of *mutation operator*.
