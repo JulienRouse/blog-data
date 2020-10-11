@@ -1,3 +1,14 @@
+---
+title: 'TODO'
+url: '/blog/project_filesharing'
+date: Tue, 16 Jun 2020 19:00:00 +0400
+draft: true
+tags: [circleci, continuous-integration]
+featured: false
+toc: true
+summary: 'todo'
+---
+
 # Project filesharing
 
 ## scope
@@ -12,7 +23,7 @@ a rough web interface: a bit of html / js, maybe jquery or something
 
 - aws s3 (maybe in the future the ability to choose the storage?) / also s3 for a simple static website?
 - aws EC2 / lambda depending what is possible
-- aws IAM 
+- aws IAM
 - Python: flask or pyramid
 - I probably need something like cloudfront / route 53 to handle the incoming traffic, not sure of that
 
