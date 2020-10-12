@@ -33,9 +33,9 @@ The process went a bit like this:
 
 For small task it was mostly OK, and on bigger task we would have a lot of back and forth but pretty often we would end up on a meeting just to chat and agree on what needed to be done or not. Not too time consuming.
 
-_Side note: we also have a document/checklist with what should be done for a PR to be merged, like presence of unit tests, does it pass all criteria for the task, respect rules in [sonarqube](https://www.sonarqube.org/) etc. I really like that we have this kind of explicit checklist, even if it is not enforced as hard as we probably should._
+_Side note: we also have a document/checklist with what should be done for a PR to be merged, like presence of unit tests, does it pass all criteria for the task, respect rules in [sonarqube](https://www.sonarqube.org/) etc. I really like that we have this explicit checklist, even if it is not enforced as hard as we probably should._
 
-Until four people it stayed kinda OK, but the fifth started to push the limit of this process.
+Until four people it stayed OK, but the fifth started to push the limit of this process.
 
 What happened most of the time is that at the start of our two-week sprint, everybody went on to take tasks, code happily, and pull requests are opened. Then people started to look at other people's pull request a bit, comment on some things, then go start a new task and sometimes start to address some of the comments on their own pull request. Pull requests took a long time to be closed, and there was always more PR being opened than PR being closed. Then at some point, the pile of stuff to do was empty so people started to look again at the PR, but by that time there was a lot of them, and keeping track of everything was hard.
 
@@ -57,7 +57,7 @@ And some of us are more "result focused" or "output focused" as they like to say
 
 _I lean strongly on the first camp, can you tell? My biggest pet peeve is naming. But I also recognize that sometime shipping working code sooner is more important than polishing it for 3 months. As always, you must find a good balance and context can have a huge influence on how much time you have to refactor/clean your code_
 
-I think this problem is kind of tangential to our time problem. We need to align people better on what production code should look like, but that is not our main problem in this case I believe (_but I could be terribly terribly wrong._)
+I think this problem is somewhat tangential to our time problem. We need to align people better on what production code should look like, but that is not our main problem in this case I believe (_but I could be terribly terribly wrong._)
 
 I watched a few of [Kevlin Henney's talk](https://www.youtube.com/results?search_query=kevlin+henney) recently and I think he has some good bit on this aspect of programming (and many other, go take a look).
 
@@ -83,7 +83,7 @@ Another thing I am interested is on which day PR are closed. If we close all our
 
 This one is mostly curiosity on my part: does amount of comment correlate closely with time to close PR?
 
-Intuitively I think that it would be the case but sometimes you get surprise with intuition so I wanted to know. _spoiler alert: it kind of does correlate but much more weakly that what I thought_
+Intuitively I think that it would be the case but sometimes you get surprise with intuition so I wanted to know. _spoiler alert: it does correlate weakly, but less than what I thought_
 
 ### Data in image
 
@@ -93,7 +93,7 @@ Here are three graphics I plotted in Excel with the data I freshly gathered (_wi
 
 The first one is the number of days to close a PR on the x-axis, and number of PR that were closed in that many days in the y-axis.
 
-{{< figure src="/img/blog_15_pr_data_number_of_days_to_close_a_PR.png" alt="Number of days to close a PR">}}
+{{< figure src="/img/blog_15_pr_data_correlation_comments_vs_time_to_close_a_PR.png" alt="Number of days to close a PR">}}
 
 This shows that contrary to my guesstimate above, we do close quite a lot of PR in less than one day. Obviously those includes configuration changes, very small fixes and people merging their own PR without waiting code review to go fast... But still, it's a decent number.
 
