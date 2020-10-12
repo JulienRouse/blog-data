@@ -33,9 +33,9 @@ The process went a bit like this:
 
 For small task it was mostly OK, and on bigger task we would have a lot of back and forth but pretty often we would end up on a meeting just to chat and agree on what needed to be done or not. Not too time consuming.
 
-_Side note: we also have a document/checklist with what should be done for a PR to be merged, like presence of unit tests, does it pass all criteria for the task, respect rules in [sonarqube](https://www.sonarqube.org/) etc. I really like that we have this kind of explicit checklist, even if it is not enforced as hard as we probably should._
+_Side note: we also have a document/checklist with what should be done for a PR to be merged, like presence of unit tests, does it pass all criteria for the task, respect rules in [sonarqube](https://www.sonarqube.org/) etc. I really like that we have this explicit checklist, even if it is not enforced as hard as we probably should._
 
-Until four people it stayed kinda OK, but the fifth started to push the limit of this process.
+Until four people it stayed OK, but the fifth started to push the limit of this process.
 
 What happened most of the time is that at the start of our two-week sprint, everybody went on to take tasks, code happily, and pull requests are opened. Then people started to look at other people's pull request a bit, comment on some things, then go start a new task and sometimes start to address some of the comments on their own pull request. Pull requests took a long time to be closed, and there was always more PR being opened than PR being closed. Then at some point, the pile of stuff to do was empty so people started to look again at the PR, but by that time there was a lot of them, and keeping track of everything was hard.
 
@@ -57,7 +57,7 @@ And some of us are more "result focused" or "output focused" as they like to say
 
 _I lean strongly on the first camp, can you tell? My biggest pet peeve is naming. But I also recognize that sometime shipping working code sooner is more important than polishing it for 3 months. As always, you must find a good balance and context can have a huge influence on how much time you have to refactor/clean your code_
 
-I think this problem is kind of tangential to our time problem. We need to align people better on what production code should look like, but that is not our main problem in this case I believe (_but I could be terribly terribly wrong._)
+I think this problem is somewhat tangential to our time problem. We need to align people better on what production code should look like, but that is not our main problem in this case I believe (_but I could be terribly terribly wrong._)
 
 I watched a few of [Kevlin Henney's talk](https://www.youtube.com/results?search_query=kevlin+henney) recently and I think he has some good bit on this aspect of programming (and many other, go take a look).
 
@@ -83,7 +83,7 @@ Another thing I am interested is on which day PR are closed. If we close all our
 
 This one is mostly curiosity on my part: does amount of comment correlate closely with time to close PR?
 
-Intuitively I think that it would be the case but sometimes you get surprise with intuition so I wanted to know. _spoiler alert: it kind of does correlate but much more weakly that what I thought_
+Intuitively I think that it would be the case but sometimes you get surprise with intuition so I wanted to know. _spoiler alert: it does correlate weakly, but less than what I thought_
 
 ### Data in image
 
@@ -97,7 +97,7 @@ The first one is the number of days to close a PR on the x-axis, and number of P
 
 This shows that contrary to my guesstimate above, we do close quite a lot of PR in less than one day. Obviously those includes configuration changes, very small fixes and people merging their own PR without waiting code review to go fast... But still, it's a decent number.
 
-On the opposite spectrum, we have some PR that took more than 2 days to close. (The one that took 11+ days was a draft PR opened at the start of the previous sprint, and closed at the beginning of the current sprint, so kinda an outlier but I kept it anyway). Those are the one we are looking to get rid of.
+On the opposite spectrum, we have some PR that took more than 2 days to close. (The one that took 11+ days was a draft PR opened at the start of the previous sprint, and closed at the beginning of the current sprint. It is an outlier but I kept it anyway). Those are the one we are looking to get rid of.
 
 The second plot is the frequency of PR merged by day. x-axis is the day of the week (in French but you can probably work with it ;) ), with the week number as a suffix. "1" for the first week of the sprint, "2" for the second week.
 
@@ -132,7 +132,7 @@ Cons are:
 
 - people not reviewing the code will be less familiar with the whole code base (unless they go read the PR for themselves but restrain from commenting unless big mistake).
 - how to choose the pair to review
-  I'd like to try this one, but I'm a bit torn on how to choose the pair of reviewers. It is always the same people together? Random pair? Familiarity? Time available at the time of deciding who's gonna take care of it?
+  I'd like to try this one, but I'm a bit torn on how to choose the pair of reviewers. It is always the same people together? Random pair? Familiarity? Time available at the time of deciding who's going to take care of it?
 
 ### Put one person in charge of all PR
 
@@ -140,7 +140,7 @@ One developer main task for a sprint could be to review and approve/fix - we dec
 
 ### Put one person in charge of one PR
 
-Each PR has one main reviewer - We are gonna try this.
+Each PR has one main reviewer - We are going to try this.
 
 We put everybody as a reviewer on the PR in Bitbucket, but only one of use is responsible for accepting/declining. Everybody is still welcome (and encouraged) to go take a look at the PR, and comment on things that are major flaws.
 
@@ -154,7 +154,7 @@ We decided to go with this one, and to keep things light, to just decide at the 
 
 ### Don't commit uninvited to someone else's branch
 
-This one should be kinda a non-brainer but if you push things on somebody else's branch without communicating/cooperating, bad things might happen. At the very least, it can be frustrating.
+This one should be a no-brainer but if you push things on somebody else's branch without communicating/cooperating, bad things might happen. At the very least, it can be frustrating.
 
 While obvious, I (and others on the team) have been doing it on some occasion so we are trying to reiterate on the fact that we should really avoid doing this.
 
@@ -174,4 +174,4 @@ Still now we have some really nice ideas to improve, and when things settle down
 
 As an aside, the team did a really good job to come up with ideas on how to improve, and the process was very smooth. All the frustration from the previous weeks on this topic turned into a very productive 30 min meeting on getting better at it.
 
-It does not always end up so well, but I think it is also the result of our team growing together. Whatever the outcome of our experiment, we are still a better team this week that the previous one and that is an amazing to witness it.
+It does not always end up so well, but I think it is also the result of our team growing together. Whatever the outcome of our experiment is, we are still a better team this week that the previous one and that is amazing to witness.
