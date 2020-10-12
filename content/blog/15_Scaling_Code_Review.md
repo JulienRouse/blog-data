@@ -97,7 +97,7 @@ The first one is the number of days to close a PR on the x-axis, and number of P
 
 This shows that contrary to my guesstimate above, we do close quite a lot of PR in less than one day. Obviously those includes configuration changes, very small fixes and people merging their own PR without waiting code review to go fast... But still, it's a decent number.
 
-On the opposite spectrum, we have some PR that took more than 2 days to close. (The one that took 11+ days was a draft PR opened at the start of the previous sprint, and closed at the beginning of the current sprint, so kinda an outlier but I kept it anyway). Those are the one we are looking to get rid of.
+On the opposite spectrum, we have some PR that took more than 2 days to close. (The one that took 11+ days was a draft PR opened at the start of the previous sprint, and closed at the beginning of the current sprint. It is an outlier but I kept it anyway). Those are the one we are looking to get rid of.
 
 The second plot is the frequency of PR merged by day. x-axis is the day of the week (in French but you can probably work with it ;) ), with the week number as a suffix. "1" for the first week of the sprint, "2" for the second week.
 
@@ -132,7 +132,7 @@ Cons are:
 
 - people not reviewing the code will be less familiar with the whole code base (unless they go read the PR for themselves but restrain from commenting unless big mistake).
 - how to choose the pair to review
-  I'd like to try this one, but I'm a bit torn on how to choose the pair of reviewers. It is always the same people together? Random pair? Familiarity? Time available at the time of deciding who's gonna take care of it?
+  I'd like to try this one, but I'm a bit torn on how to choose the pair of reviewers. It is always the same people together? Random pair? Familiarity? Time available at the time of deciding who's going to take care of it?
 
 ### Put one person in charge of all PR
 
@@ -140,7 +140,7 @@ One developer main task for a sprint could be to review and approve/fix - we dec
 
 ### Put one person in charge of one PR
 
-Each PR has one main reviewer - We are gonna try this.
+Each PR has one main reviewer - We are going to try this.
 
 We put everybody as a reviewer on the PR in Bitbucket, but only one of use is responsible for accepting/declining. Everybody is still welcome (and encouraged) to go take a look at the PR, and comment on things that are major flaws.
 
@@ -154,7 +154,7 @@ We decided to go with this one, and to keep things light, to just decide at the 
 
 ### Don't commit uninvited to someone else's branch
 
-This one should be kinda a non-brainer but if you push things on somebody else's branch without communicating/cooperating, bad things might happen. At the very least, it can be frustrating.
+This one should be a no-brainer but if you push things on somebody else's branch without communicating/cooperating, bad things might happen. At the very least, it can be frustrating.
 
 While obvious, I (and others on the team) have been doing it on some occasion so we are trying to reiterate on the fact that we should really avoid doing this.
 
