@@ -174,4 +174,4 @@ Still now we have some really nice ideas to improve, and when things settle down
 
 As an aside, the team did a really good job to come up with ideas on how to improve, and the process was very smooth. All the frustration from the previous weeks on this topic turned into a very productive 30 min meeting on getting better at it.
 
-It does not always end up so well, but I think it is also the result of our team growing together. Whatever the outcome of our experiment, we are still a better team this week that the previous one and that is an amazing to witness it.
+It does not always end up so well, but I think it is also the result of our team growing together. Whatever the outcome of our experiment is, we are still a better team this week that the previous one and that is amazing to witness.
