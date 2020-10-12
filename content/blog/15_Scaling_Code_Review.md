@@ -93,7 +93,7 @@ Here are three graphics I plotted in Excel with the data I freshly gathered (_wi
 
 The first one is the number of days to close a PR on the x-axis, and number of PR that were closed in that many days in the y-axis.
 
-{{< figure src="/img/blog_15_pr_data_correlation_comments_vs_time_to_close_a_PR.png" alt="Number of days to close a PR">}}
+{{< figure src="/img/blog_15_pr_data_number_of_days_to_close_a_PR.png" alt="Number of days to close a PR">}}
 
 This shows that contrary to my guesstimate above, we do close quite a lot of PR in less than one day. Obviously those includes configuration changes, very small fixes and people merging their own PR without waiting code review to go fast... But still, it's a decent number.
 
