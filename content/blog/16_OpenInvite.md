@@ -1,9 +1,9 @@
 ---
 title: 'Open Invite'
-url: '/blog/open_invite'
+url: '/blog/open-invite'
 date: Sat, 17 Oct 2020 19:00:00 +0000
 draft: false
-tags: []
+tags: [open-invite]
 featured: true
 toc: false
 summary: 'You are cordially invited to talk to me'
