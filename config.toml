@@ -1,6 +1,6 @@
 baseURL = "https://www.julienrouse.com/"
 languageCode = "en-us"
-title = "I break things often and sometimes I manage to fix them"
+title = "I break things often. Sometimes I manage to fix them"
 theme = "hugo-resume"
 Content = "CONTENT"
 
@@ -35,7 +35,7 @@ pygmentsOptions = "linenos=table"
     contactNote = "Developer" #used in QR code only
     profileImage = "img/me.png"
     email = "contact@julienrouse.com"
-    description = "I break things often and sometimes I manage to fix them" # Goes into <meta:description>
+    description = "I break things often. Sometimes I manage to fix them" # Goes into <meta:description>
     favicon = "images/favicon.ico"
 
     # what sections to display.  Setting to false disables navigation and section.

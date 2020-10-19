@@ -2,11 +2,12 @@
 title: "Julien Rousé's home"
 date: 2018-02-10T18:56:13-05:00
 sitemap:
-  priority : 1.0
+  priority: 1.0
 
 outputs:
-- html
-- rss
-- json
+  - html
+  - rss
+  - json
 ---
-<p> I break things often and sometimes I manage to fix them. </p>
+
+<p> I break things often. Sometimes I manage to fix them. </p>
