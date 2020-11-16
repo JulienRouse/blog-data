@@ -3,9 +3,9 @@ title: 'Review: the Art of Code'
 url: '/blog/presentation_the_art_of_code'
 date: Tue, 16 Jun 2020 19:00:00 +0400
 draft: false
-tags: [review, eso-lang]
+tags: [review, eso-lang, short]
 featured: false
-toc: true
+toc: false
 summary: "Very short discussion on Dylan Beattie's presentation 'The Art of Code'"
 ---
 
