@@ -11,7 +11,7 @@ summary: 'It is time for NaNoWriMo 2020 and I have a plan!'
 
 # My Nanowrimo 2020
 
-I always dreamed to be a writer when I was little. It was my answer to everybody that asked me what I wanted to be when I grow up between middle school until late high school. (It was actually my third career choice, my first dream "job" was being an Eskimo)
+I always dreamed to be a writer when I was little. It was my answer to everybody that asked me what I wanted to be when I grow up between middle school until late high school. (It was actually my third career choice, my first dream "job" was being an Eskimo).
 
 Now I'm a bit far off from that path, but writing slowly for this blog brings me a bit closer to that dream. But I write sporadically and my backlog for new articles is getting full. Getting to it is always the hardest part. So I went on my way to subscribe to [NaNoWriMo](https://nanowrimo.org/about-nano): the National Novel Writing Month!
 
@@ -64,4 +64,4 @@ While daydreaming about how I would go on about doing NaNoWrimo and my old dream
 
 ### Bonus 2
 
-I put in my NaNoWriMo profile that one of my all-time favourite books was Philip Pullman's _[His Dark Materials](https://en.wikipedia.org/wiki/His_Dark_Materials)_. But to add it to my list, I had to find the title in English and it's a lot different than in French. I spent some time in the Wikipedia page for it to try to understand why and discovered that one of the major sources of inspiration for this trilogy was John Milton's Paradise Lost. I have reserved a copy already from my local library, I'll have it in 10 days :) I still don't have a good idea for why the name is quite different from one language to another, though :/
+I put in my NaNoWriMo profile that one of my all-time favourite books was Philip Pullman's [His Dark Materials](https://en.wikipedia.org/wiki/His_Dark_Materials). But to add it to my list, I had to find the title in English and it's a lot different than in French. I spent some time in the Wikipedia page for it to try to understand why and discovered that one of the major sources of inspiration for this trilogy was John Milton's Paradise Lost. I have reserved a copy already from my local library, I'll have it in 10 days :) I still don't have a good idea for why the name is quite different from one language to another, though :/
