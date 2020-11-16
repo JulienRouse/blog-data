@@ -19,9 +19,7 @@ Doing so, I follow the steps of [patio11](https://www.kalzumeus.com/standing-inv
 
 - **I like a good discussion**. I like people challenging me, telling me about things I did not know, challenging them back and exchanging ideas.
 
-- **I like sharing experiences**. The nicest interactions I had in the past are usually having a experienced peer help me grow, or me helping a younger peer get on the right track to solve their problem. If you like that kind of exchange, talk to me!
-
-- **I like meeting people** If you are around Montreal, hit me up, we might get a tea or an ice-cream and talk. (Edit: when COVID will be less of a problem)
+- **I like sharing experiences**. The nicest (software related) interactions I had in the past are usually having a experienced peer help me grow, or me helping a less-experienced peer get on the right track to solve their problem. If you like that kind of exchange, talk to me!
 
 - **I like programming and software**. This is even more true lately when I have to deal with something related to:
 
@@ -41,5 +39,7 @@ Something you can help _me_ with:
 And also:
 
 - **I don't like social media** Most of the time I would not want to have a nice exchange on a social media.
+
+- **This is not an invite for recruiters** That's why Linkedin exists.
 
 - **I don't like phone call** If you want to speak to me by phone, marry a Rousé.
