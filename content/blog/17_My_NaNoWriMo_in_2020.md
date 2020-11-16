@@ -11,14 +11,14 @@ summary: 'It is time for NaNoWriMo 2020 and I have a plan!'
 
 # My Nanowrimo 2020
 
-I always dreamed to be a writer when I was little. It was my answer to everybody that asked me what I wanted to be when I grow up between middle school until late high school. (It was actually my third career choice, my first dream job was being an Eskimo, and my second one was co-pilot for my brother at the time he wanted to be a truck driver. My family still bring it up to me once in a while)
+I always dreamed to be a writer when I was little. It was my answer to everybody that asked me what I wanted to be when I grow up between middle school until late high school. (It was actually my third career choice, my first dream "job" was being an Eskimo)
 
 Now I'm a bit far off from that path, but writing slowly for this blog brings me a bit closer to that dream. But I write sporadically and my backlog for new articles is getting full. Getting to it is always the hardest part. So I went on my way to subscribe to [NaNoWriMo](https://nanowrimo.org/about-nano): the National Novel Writing Month!
 
 In fact, I'm not writing a novel. But I joined anyway to prepare drafts and articles for this blog. The goal of NaNoWriMo is to write 50000 words during November.
 For some people, it usually means drafting a novel, or a series of essays. For me the goal will be to add 50000 words to my blog (at least to write drafts.) And maybe toward the end I'll write a few short stories if I have a good pace to try my hands at that kind of writing.
 
-To help in this journey, you can join a local community of people writing their own things. I joined the one from Montréal (Canada, QC) and also the one from Lille (France) to have small communities to share my achievements and my hardships.
+To help in this journey, you can join a local community of people writing their own things. I joined the one from Montréal (Canada, QC) to have a small community to share my achievements and my hardships.
 
 50000 words in a month is a lot. To give some perspective, since I started this blog in 2018, I wrote around 20000 words and published around 12000 of them. So if I "win" NaNoWriMo this year, I'll more than double what I did previously in approximately two years.
 
@@ -35,7 +35,7 @@ To write that much, I needed a plan. So I started by looking at my backlog of id
 - The benefits of being exposed to many programming languages and paradigms
 - And a lot more hopefully!
 
-I am also hoping to nourish a habit of writing by pushing me to write every day for a month. For now I intend to write 30 minutes in the morning (I usually start work around 7a.m. but I'll write from 7 to 7.30 and start working after), 30 minutes for my lunch break and 30 minutes or more in the evening. The evening is a bit harder to plan for me but I should be able to at least get a good hour of writing every day.
+I am also hoping to nourish a habit of writing by pushing me to write every day for a month. For now I intend to write 30 minutes in the morning before work, 30 minutes for my lunch break and 30 minutes or more in the evening. The evening is a bit harder to plan for me but I should be able to at least get a good hour of writing every day.
 
 ## Obstacles
 
