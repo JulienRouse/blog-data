@@ -118,6 +118,11 @@ table {
   margin-bottom: 1em;
 }
 
+/* Remove empty black space at the end of a code block */
+table pre {
+  margin-bottom: 0rem;
+}
+
 /* The short paragraph at the bottom of the article to invite people to write to me*/
 .open-invite-blog {
   color: #000;
