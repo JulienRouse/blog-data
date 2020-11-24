@@ -11,7 +11,7 @@ summary: 'Reflection on the big mistakes I made this year. What went wrong, what
 
 # Learning from my mistakes on the job in the past year
 
-_This article is part of the ones I drafted during [NaNoWriMo 2020]({{< relref "17_My_NaNoWriMo_in_2020.md" >}})_
+_This article was drafted during [NaNoWriMo 2020]({{< relref "17_My_NaNoWriMo_in_2020.md" >}})_
 
 End of the year is coming, and this is also the last two months of the project I was working on for the past 15 months. It is a good time to reflect on the decisions and actions I made and try to see what could have been done better.
 
