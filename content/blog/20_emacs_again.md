@@ -1,8 +1,8 @@
 ---
-date: Sat, 08 May 2021 19:00:00 +0000
+date: Sat, 15 May 2021 19:00:00 +0000
 title: Emacs again
 url: '/blog/emacs-again'
-draft: true
+draft: false
 tags: [emacs]
 featured: true
 toc: false

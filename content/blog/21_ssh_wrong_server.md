@@ -1,5 +1,5 @@
 ---
-date: "Sat, 15 May 2021 19:00:00 +0000"
+date: "Sat, 22 May 2021 19:00:00 +0000"
 title: Wrong domain to test SSH setup
 url: '/blog/wrong-domain-to-test-ssh-setup'
 draft: true
