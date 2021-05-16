@@ -47,7 +47,7 @@ This one is totally new to me, a
 well integrated in Emacs.
 
 I have heard a lot of good things on [Magit](https://magit.vc/), so it
-is on my list of packages to try!
+is on my lists of packages to try!
 
 ## lsp-mode
 
