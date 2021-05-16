@@ -3,7 +3,7 @@ date: Sat, 15 May 2021 19:00:00 +0000
 title: Emacs again
 url: '/blog/emacs-again'
 draft: false
-tags: [emacs]
+tags: [emacs, short]
 featured: true
 toc: false
 summary: 'I give Emacs another try!'
