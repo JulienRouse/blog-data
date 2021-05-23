@@ -1,8 +1,8 @@
 ---
 date: "Sat, 22 May 2021 19:00:00 +0000"
-title: Wrong domain to test SSH setup
+title: Wrong domain to test SSH setup (Gitlab)
 url: '/blog/wrong-domain-to-test-ssh-setup'
-draft: true
+draft: false
 tags: [ssh, gitlab]
 featured: false
 toc: false
