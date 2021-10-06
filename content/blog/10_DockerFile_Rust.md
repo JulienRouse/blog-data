@@ -1,6 +1,6 @@
 ---
 title: 'blabla'
-url: '/blog/introduction_to_mutation_testingff'
+url: '/blog/introduction_to_mutation_testing'
 date: Sat, 09 May 2020 19:00:00 +0000
 draft: true
 tags: [test-automation, quality, mutation-testing]
