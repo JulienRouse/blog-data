@@ -3,7 +3,7 @@ title: 'Tutorial for an Idle game with Svelte (Part2)'
 url: '/blog/tutorial-for-idle-game-svelte-part2'
 date: Sat, 12 Oct 2019 20:00:00 +0000
 draft: false
-tags: [svelte,SPA,game,tutorial,idle]
+tags: [svelte,SPA,game,tutorial,idle,serie-svelte]
 featured: false
 toc: true
 summary: "Diving deeper into Svelte, continuing our idle game."
