@@ -3,7 +3,7 @@ title: 'Final thoughts on Svelte and the tutorial'
 url: '/blog/final-thoughts-svelte-and-tutorial'
 date: Sat, 26 Oct 2019 20:00:00 +0000
 draft: true
-tags: [svelte,SPA,game,tutorial,idle]
+tags: [svelte,SPA,game,tutorial,idle,serie-svelte]
 featured: false
 toc: true
 summary: "Final thoughts."
