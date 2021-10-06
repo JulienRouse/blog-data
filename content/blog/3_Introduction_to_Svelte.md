@@ -3,7 +3,7 @@ title: 'Introduction to Svelte'
 url: '/blog/introduction-to-svelte'
 date: Sat, 15 Jun 2019 19:00:00 +0000
 draft: false
-tags: [svelte, SPA]
+tags: [svelte, SPA, serie-svelte]
 featured: true
 toc: true
 summary: "Let's discover Svelte and build a little idle game together."
