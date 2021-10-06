@@ -3,7 +3,7 @@ title: 'Tutorial for an Idle game with Svelte (Part3)'
 url: '/blog/tutorial-for-idle-game-svelte-part3'
 date: Sat, 18 Oct 2019 20:00:00 +0000
 draft: false
-tags: [svelte,SPA,game,tutorial,idle]
+tags: [svelte,SPA,game,tutorial,idle,serie-svelte]
 featured: false
 toc: true
 summary: "Adding upgrades to the game."
