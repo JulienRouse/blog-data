@@ -6,7 +6,7 @@ draft: true
 tags: [test-automation,quality,mutation-testing,rust,docker]
 featured: false
 toc: true
-summary: 'TODO'
+summary: 'Trying my hand at wasm'
 ---
 
 # Docker file for Rust
