@@ -3,7 +3,7 @@ title: 'blabla'
 url: '/blog/introduction_to_mutation_testingff'
 date: Sat, 09 May 2020 19:00:00 +0000
 draft: true
-tags: [test-automation,quality,mutation-testing]
+tags: [test-automation,quality,mutation-testing,rust]
 featured: false
 toc: true
 summary: "Why slaying mutants is good for measuring the quality of your tests"
