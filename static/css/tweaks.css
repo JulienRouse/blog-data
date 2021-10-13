@@ -1,38 +1,34 @@
-.p-0{
+.p-0 {
   margin: 0 auto;
 }
 
-
-.devicons{
-  font-size:1.5em;
-      vertical-align: sub;
+.devicons {
+  font-size: 1.5em;
+  vertical-align: sub;
 }
 
 /* ensure items with short summaries push date over image */
-.publication-content{
-  width:90%;
+.publication-content {
+  width: 90%;
 }
 
-
-h3{
-    margin-top:40px;
+h3 {
+  margin-top: 40px;
 }
 
-h3.mb-0{
-    margin-top:0;
+h3.mb-0 {
+  margin-top: 0;
 }
 
-div.skills-heading{
-    margin-top:1em;
-    margin-bottom:0 !important;
+div.skills-heading {
+  margin-top: 1em;
+  margin-bottom: 0 !important;
 }
-
-
 
 /* From https://codepen.io/wbeeftink/pen/dIaDH */
 
 .tags {
-    font: 12px/1.5 'PT Sans', serif;
+  font: 12px/1.5 'PT Sans', serif;
   list-style: none;
   margin: 0;
   overflow: hidden;
@@ -86,39 +82,49 @@ div.skills-heading{
 }
 
 .tag:hover::after {
-   border-left-color: crimson;
+  border-left-color: crimson;
 }
 
-.project-fact{
-  font-size:80%;
-  font-style:italic;
+.project-fact {
+  font-size: 80%;
+  font-style: italic;
 }
-
 
 .resume-section blockquote {
-    border-left: 4px solid #BD5D38;
-    padding-left: 1em;
+  border-left: 4px solid #bd5d38;
+  padding-left: 1em;
 }
 
 /* Change rules for toc in blog posts */
 #toc-blog {
-	margin-top:25px;
-	margin-bottom:25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 #toc-blog a {
-	color: #0062cc
+  color: #0062cc;
 }
 /* Fix responsive width for blog posts */
 .my-auto {
-	width: 100%;
-	max-width: 1000px;
-	margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 /* Fix space after code sample */
-.highlight{
-	margin-bottom: 1em;
+.highlight {
+  margin-bottom: 1em;
 }
 /* Fix space after table */
-table{
-	margin-bottom: 1em;
+table {
+  margin-bottom: 1em;
+}
+
+/* Remove empty black space at the end of a code block */
+table pre {
+  margin-bottom: 0rem;
+}
+
+/* The short paragraph at the bottom of the article to invite people to write to me*/
+.open-invite-blog {
+  color: #000;
+  font-weight: bold;
 }

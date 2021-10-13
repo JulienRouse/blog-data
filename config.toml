@@ -1,6 +1,6 @@
 baseURL = "https://www.julienrouse.com/"
 languageCode = "en-us"
-title = "Learning for fun and profits"
+title = "I break things often. Sometimes I manage to fix them"
 theme = "hugo-resume"
 Content = "CONTENT"
 
@@ -35,7 +35,7 @@ pygmentsOptions = "linenos=table"
     contactNote = "Developer" #used in QR code only
     profileImage = "img/me.png"
     email = "contact@julienrouse.com"
-    description = "Software Developer with varied interests like functional programing, Lisp languages, security and more!" # Goes into <meta:description>
+    description = "I break things often. Sometimes I manage to fix them" # Goes into <meta:description>
     favicon = "images/favicon.ico"
 
     # what sections to display.  Setting to false disables navigation and section.
@@ -45,7 +45,7 @@ pygmentsOptions = "linenos=table"
     showPublications = false
     showExperience = false
     showEducation = false
-	showBlog = true
+	  showBlog = true
     showQr = false
 
     # do you want to show git hash on page footer and link to repo? Add commit URl for repo here.
@@ -76,11 +76,8 @@ pygmentsOptions = "linenos=table"
 
 [[params.handles]]
     name = "HackerRank"
-	link = "https://www.hackerrank.com/JulienRouse?hr_r=1"
+	  link = "https://www.hackerrank.com/JulienRouse?hr_r=1"
 	
-
-[params.google.analytics]
-    trackerID = "XX-123446-01"
 
 [outputs] #only required for search
     home = ["HTML", "JSON"]

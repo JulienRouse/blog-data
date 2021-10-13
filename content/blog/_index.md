@@ -1,8 +1,11 @@
 ---
-title: "Blog"
+title: 'Blog'
 sitemap:
-  priority : 0.9
+  priority: 0.9
 ---
-Here I share my thoughts about **Clojure/Script**, **Java** and the **JVM**, **Rust**, **Sustainable development**, **History**, **Fencing** ...
 
-*And a lot more* :)
+Here I share my thoughts mainly about software developement and computer science.
+
+_[All blog posts](/blog/)_
+
+_[All tags](/tags/)_
