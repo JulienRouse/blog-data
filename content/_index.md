@@ -9,5 +9,4 @@ outputs:
   - rss
   - json
 ---
-
-<p> I break things often. Sometimes I manage to fix them. </p>
+I break things often. Sometimes I manage to fix them.
