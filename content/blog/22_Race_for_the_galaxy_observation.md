@@ -1,6 +1,6 @@
 ---
 title: 'Race for the galaxy milestone'
-url: '/blog/race_for_the_galazy_milestone'
+url: '/blog/race-for-the-galaxy-milestone'
 date: Sat, 17 Oct 2021 19:00:00 +0000
 draft: false
 tags: [boardgame, rftg]
