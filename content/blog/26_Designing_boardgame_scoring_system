@@ -1,0 +1,44 @@
+---
+title: 'Designing a boardgame scoring system'
+url: '/blog/designing-boardgame-scoring-system'
+date: Tue, 21 Dec 2021 19:00:00 +0000
+draft: true
+tags: [i-dont-know, boardgames]
+featured: true
+toc: false
+summary: 'TODO.'
+---
+
+With my girlfriend we play boardgames together, and we like to keep the score after the games (to have a little historic of our play and for bragging right).
+For the longest time, we talked about having an app or something to keep track of our scores, but we never went really far with this idea. So for the longest time, we wrote our score on flying sheets of paper, but we lost most of them.
+
+A long time ago we started an android tutorial together with the intent to learn some programming together, and also accomplish a little project by building an application that we could use. But then life happened and we did not get far into it.
+
+But today I'm feeling like starting again to scratch that itch. But I'm still procrastinating on it a bit, so I'm starting by writing about it before coding (let's calling it a spec).
+
+## Requirements from an user point of view
+
+Let's start by gathering the requirements from the user perspective and then see what we can do with that. It's refreshing to be on this side of the table :) 
+
+- As an user, I want to keep an historic of my score for various boardgame like Carcassone, Calico, ...
+- As an user, I want to have a timestamp of my game  (as in, able to record the score with the date the game was played). Accuracy in days is fine
+- As an user, I want to be able to leave a comment on a game (or a note or something to give some context)
+- As an user, I want to be able to record the score for multiple players (and have their name too) : that can be from 1 player to many (but usually no more than 5-6)
+- As an user, I want to be able to keep track of the scoring breakdown: say for Calico, I want to be able to record for each player the scoring for objectives, for color and for cat separately.
+- As an user, I want to be able to get the best score for a game
+- As an user, I want to be able to get the number of game for each game
+- As an user, I want to be able to get the number of win for each game per player
+
+and that would be more than enough for now!
+
+## Trying to work some of the implicit requirements
+
+### Keeping an historic for various boardgames
+TODO put this section in a more technical design document?
+
+Keeping scores for many boardgames can mean two things to me:
+
+Either we keep the score in a very generic way, to be able to accomodate all games (or a very large pourcentage of them). The most basic way is probably to keep only if the player win or lose. Not all games have points for example. But their are games where it is possible for all players to lose, or for all players to win as well, so would need to accomodate for that as well. To had points or others information, it could go into a freeform comment. But this would be hard to be able to 
+
+
+Another way to look at it is by providing "template" for each game to be able to have much more details for each game, but at the cost that it would probably mean losing the genericity (need to add something for each game we want to keep track of)
