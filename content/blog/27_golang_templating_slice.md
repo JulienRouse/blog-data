@@ -6,10 +6,10 @@ draft: true
 tags: [golang, short]
 featured: false
 toc: false
-summary: 'TODO.'
+summary: 'Discovering new use of fmt.Sprintf'
 ---
 
-I learned about a new trick: `fmt.Sprintf` support a format verb `%#v` that prints out a "Go-syntax representation of the value" (quoting the documentation).
+I learned a new trick: `fmt.Sprintf` (and `fmt.Printf`) support a format verb `%#v` that prints out a "Go-syntax representation of the value" (quoting the documentation).
 
 What this mean: you can ouput a value the way you would write it in valid Go source code.
 
@@ -31,7 +31,9 @@ func main() {
 
 ## Why is it useful?
 
-For me it was useful when using Go template to generate Go code (generating CLI commands from OpenAPI specification). In my input file, I had a slice I wanted to insert into the generated code, but I can't use the value directly, because it's not valid Go code. There is a few workaround (like iterating on the slice to output each value inside and reconstructing the slice) but using `%#v` is by far the best approach.
+For me it was useful when using Go template to generate Go code (generating CLI commands from OpenAPI specification).
+
+In my input file, I had a slice I wanted to insert into the generated code, but I can't use the value directly, because it's not valid Go code. There is a few workaround (like iterating on the slice to output each value inside and reconstructing the slice) but using `%#v` is by far the best approach.
 
 
 ## References
