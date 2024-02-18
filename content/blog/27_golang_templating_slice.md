@@ -1,13 +1,14 @@
 ---
-title: 'Print Go syntax representation of a value'
-url: '/blog/print-go-syntax-representation-of-a-value'
+title: 'Print the Go syntax representation of a value'
+url: '/blog/print-the-go-syntax-representation-of-a-value'
 date: Thu, 15 Feb 2024 19:00:00 +0000
-draft: true
+draft: false
 tags: [golang, short]
 featured: false
 toc: false
-summary: 'Discovering new use of fmt.Sprintf'
+summary: 'Discovering new use of Golang formatted string'
 ---
+
 
 I learned a new trick: `fmt.Sprintf` (and `fmt.Printf`) support a format verb `%#v` that prints out a "Go-syntax representation of the value" (quoting the documentation).
 
