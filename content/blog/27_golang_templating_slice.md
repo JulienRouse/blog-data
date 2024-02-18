@@ -23,7 +23,7 @@ func main() {
 
 	var s = []string{"string in the slice"}
 
-	fmt.Printf("%v\n", s) // output [string in the slice]
+	fmt.Printf("%v\n", s) // output: [string in the slice]
 	fmt.Printf("%#v\n", s) // output: []string{"string in the slice"}
 	// To output only the type, you can use `%T` instead
 	fmt.Printf("%T\n", s) // output: []string
