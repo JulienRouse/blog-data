@@ -1,8 +1,8 @@
 ---
 title: 'Taking notes'
 url: '/blog/taking-notes'
-date: Tue, 05 Mar 2024 19:00:00 +0000
-draft: true
+date: Tue, 05 Mar 2024 07:00:00 +0000
+draft: false
 tags: [knowledge-management, writing]
 featured: true
 toc: false
