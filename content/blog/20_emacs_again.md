@@ -4,7 +4,7 @@ title: Emacs again
 url: '/blog/emacs-again'
 draft: false
 tags: [emacs, short]
-featured: true
+featured: false
 toc: false
 summary: 'I give Emacs another try!'
 ---
