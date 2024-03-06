@@ -19,6 +19,15 @@ body {
   width: 90%;
 }
 
+h1 {
+  font-size: 3rem;
+  line-height: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
 h3 {
   margin-top: 40px;
 }
