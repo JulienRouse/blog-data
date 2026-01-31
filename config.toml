@@ -66,7 +66,7 @@ pygmentsOptions = "linenos=table"
 
 [[params.handles]]
     name = "Stack Overflow"
-    link = "https://stackoverflow.com/users/story/3729797"
+    link = "https://stackexchange.com/users/1191576/julien-rous%c3%a9?tab=accounts"
     icon = "stack-overflow" #optional icon attribute used for Font Awesome icons, otherwise the name is lowercased.
 
 #[[params.handles]]

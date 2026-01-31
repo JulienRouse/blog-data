@@ -11,8 +11,6 @@ summary: 'Recommendation for note taking'
 
 _I was asked to give recommandation on taking notes and knowledge management tools by colleagues a couple time last year so I'm sharing it here too, might be useful for other people._
 
-# Taking notes
-
 ## Types of note
 
 Your mileage may vary here. Personnaly, I separate my notes in a few categories with a template for each. It clarify the intent of the note and allow me to get started rapidly.
