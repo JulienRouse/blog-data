@@ -96,7 +96,7 @@ We even keep a list of the group's favorite book (see [links](#links-to-the-grou
 
 ### Broadcast information
 
-Talk/write about your event regularly, you never know when people might join. For us, it means that at the start of each new book discussion we send a message in various communication channels (Slack before, now Microsoft Teams). We give a link to our [wiki page](#write-down-the-essentials) and to our community channel in Slack/Teams so people can contact us or share readings with us.
+Talk about your event regularly, you never know when people might join. For us, it means that at the start of each new book discussion we send a message in various communication channels (Slack before, now Microsoft Teams). We give a link to our [wiki page](#write-down-the-essentials) and to our community channel in Slack/Teams so people can contact us or share readings with us.
 
 ### Future reading list is never empty
 
@@ -136,28 +136,38 @@ As a side effect of running a reading group, I got to meet like-minded people th
 
 As a bonus, here is the list of our group's favorite books/articles over the years (from most recently discussed to least recently discussed):
 
-- [The Phoenix Project](https://www.goodreads.com/book/show/17255186-the-phoenix-project) Gene Kim, Kevin Behr, Geroge Spafford
-- [Pragmatic Thinking and Learning: refactor your wetware](https://pragprog.com/titles/ahptl/pragmatic-thinking-and-learning/) by Andy Hunt
-- [The Staff Engineer's Path](https://www.oreilly.com/library/view/the-staff-engineers/9781098118723)  by Tanya Reilly
-- [A philosophy of software design](https://web.stanford.edu/~ouster/cgi-bin/book.php) by John Ousterhout
-- [Implementation of Cluster-wide Logical Clock and Causal Consistency in MongoDB](https://doi.org/10.1145/3299869.3314049)
-- [Time, Clocks, and the Ordering of Events in a Distributed System](https://dl.acm.org/doi/pdf/10.1145/359545.359563) 
-- [Metastable failures in distributed systems fail](https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s11-bronson.pdf)
-- [A Plea for lean software](https://cr.yp.to/bib/1995/wirth.pdf) by Niklaus Wirth
-- Hillel Wayne's "Crossover Project"
-    - [Are we really engineers?](https://www.hillelwayne.com/post/are-we-really-engineers/)
-    - [We are not special](https://www.hillelwayne.com/post/we-are-not-special/)
-    - [What can we learn?](https://www.hillelwayne.com/post/what-we-can-learn/)
-- [Why software projects take longer than you think? - A statistical model](https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model.html) (by Erik Bern)
-- [Increment - In praise of property based testing](https://increment.com/testing/in-praise-of-property-based-testing/) (by David Maciver)
-- [2007: The Dynamo paper "Dynamo: amazon's highly available key-value store"](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf) (ACM SIGOPS 2007)
-- [SPACE of developer productivity](https://queue.acm.org/detail.cfm?id=3454124)
-- [Gray Failure: The Achilles' Heel of Cloud-Scale Systems](https://dl.acm.org/doi/10.1145/3102980.3103005)
+### Books
+
+- [The Phoenix Project](https://www.goodreads.com/book/show/17255186-the-phoenix-project) (by Gene Kim, Kevin Behr, Geroge Spafford)
+- [Pragmatic Thinking and Learning: refactor your wetware](https://pragprog.com/titles/ahptl/pragmatic-thinking-and-learning/) (by Andy Hunt)
+- [The Staff Engineer's Path](https://www.oreilly.com/library/view/the-staff-engineers/9781098118723)  (by Tanya Reilly)
+- [A philosophy of software design](https://web.stanford.edu/~ouster/cgi-bin/book.php) (by John Ousterhout)
 - [Software engineering at Google - Lessons learned Programming over time](https://abseil.io/resources/swe-book/html/toc.html) (Online free version). Overall it was nice to read and discuss it but was not voted as a favorite. On the contrary, some chapters really stood out and we kept them in our favorites.
     - [Testing overview](https://abseil.io/resources/swe-book/html/ch11.html)
     - [Documentation](https://abseil.io/resources/swe-book/html/ch10.html)
     - [How to lead a team](https://abseil.io/resources/swe-book/html/ch05.html)
     - [Measuring engineering productivity](https://abseil.io/resources/swe-book/html/ch07.html)
+
+### Blog posts
+
+- Hillel Wayne's "Crossover Project"
+    - [Are we really engineers?](https://www.hillelwayne.com/post/are-we-really-engineers/)
+    - [We are not special](https://www.hillelwayne.com/post/we-are-not-special/)
+    - [What can we learn?](https://www.hillelwayne.com/post/what-we-can-learn/)
+- [Why software projects take longer than you think? - A statistical model](https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model.html) (by Erik Bern)
+- [Increment - In praise of property based testing](https://increment.com/testing/in-praise-of-property-based-testing/) (by David MacIver)
+
+
+### Scientific papers
+
+- [Implementation of Cluster-wide Logical Clock and Causal Consistency in MongoDB](https://doi.org/10.1145/3299869.3314049)
+- [Time, Clocks, and the Ordering of Events in a Distributed System](https://dl.acm.org/doi/pdf/10.1145/359545.359563) 
+- [Metastable failures in distributed systems fail](https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s11-bronson.pdf)
+- [A Plea for lean software](https://cr.yp.to/bib/1995/wirth.pdf) (by Niklaus Wirth)
+- [SPACE of developer productivity](https://queue.acm.org/detail.cfm?id=3454124)
+- [2007: The Dynamo paper "Dynamo: amazon's highly available key-value store"](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf) (ACM SIGOPS 2007)
+- [Gray Failure: The Achilles' Heel of Cloud-Scale Systems](https://dl.acm.org/doi/10.1145/3102980.3103005)
+
 
 ## Final words
 
