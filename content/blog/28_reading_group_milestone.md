@@ -100,7 +100,7 @@ Talk about your event regularly, you never know when people might join. For us, 
 
 ### Future reading list is never empty
 
-By connecting to people that like to read and learn, as well as by [broadcasting our group's activity](#broadcast-information), we get a ton of recommendation internally by people that don't join our discussion but still like to read. They get to see what we already have read and what we are planning to read (see takeaway on keeping a [wiki page](#write-down-the-essentials)), and in return they share what they read recently and that they found interesting.
+By connecting to people that like to read and learn, as well as by [broadcasting our group's activity](#broadcast-information), we get a ton of recommendation internally by people that don't join our discussion but enjoy reading. They get to see what we already read and what we are planning to read (see takeaway on keeping a [wiki page](#write-down-the-essentials)), and in return they share what they read recently and that they found interesting.
 
 We even have some people writing technical blogs that shared their articles with us!
 
@@ -157,7 +157,6 @@ As a bonus, here is the list of our group's favorite books/articles over the yea
 - [Why software projects take longer than you think? - A statistical model](https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model.html) (by Erik Bern)
 - [Increment - In praise of property based testing](https://increment.com/testing/in-praise-of-property-based-testing/) (by David MacIver)
 
-
 ### Scientific papers
 
 - [Implementation of Cluster-wide Logical Clock and Causal Consistency in MongoDB](https://doi.org/10.1145/3299869.3314049)
@@ -167,7 +166,6 @@ As a bonus, here is the list of our group's favorite books/articles over the yea
 - [SPACE of developer productivity](https://queue.acm.org/detail.cfm?id=3454124)
 - [2007: The Dynamo paper "Dynamo: amazon's highly available key-value store"](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf) (ACM SIGOPS 2007)
 - [Gray Failure: The Achilles' Heel of Cloud-Scale Systems](https://dl.acm.org/doi/10.1145/3102980.3103005)
-
 
 ## Final words
 
