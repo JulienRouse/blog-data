@@ -1,12 +1,12 @@
 ---
 title: 'Reading group milestones: 100+ meetings'
 url: '/blog/reading-group-milestones-100+-meetings'
-date: Sat, 30 Jan 2026 19:00:00 +0000
+date: Sat, 31 Jan 2026 19:00:00 +0000
 draft: false
 tags: [reading, books, milestone]
 featured: true
 toc: true
-summary: 'Celebrating the milestone by writing down about our reading group and a few takeaways.'
+summary: 'Celebrating the milestone by writing down about our technical reading group and my takeaways.'
 ---
 
 # Milestone
@@ -89,7 +89,7 @@ Having a page with essential information about the group was very useful for us.
 
 Over time, that page grew to contain a FAQ section, and is used to record the history of every book and meeting we had, as well as maintain a list of potential article/books the group would like to read next. That way we can record easily and transparently when someone makes a suggestion, and when the time comes to choose a new book, it's easy to pick a new one.
 
-We even keep a list of the group's favorite book (see [links](#links-to-the-favorite-readings)). We use a system of emojis to sort our readings:
+We even keep a list of the group's favorite book (see [links](#links-to-the-groups-favorite-readings)). We use a system of emojis to sort our readings:
 - ⭐ for group's favorite.
 - ✔️ for readings that have good values when shared for work activities. This is most often applicable to short reads, like a particular book chapter or a blog article that we can reference in a code review.
 - ❌ for readings we do NOT recommend at all. Only happened once so far, we tried to cover a book about Domain Driven Design that was still work-in-progress and we stopped after a few chapters. It was missing too much content.
