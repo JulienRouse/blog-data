@@ -1,5 +1,5 @@
 ---
-title: 'Reading group milestones: 100+ meetings'
+title: 'Reading group milestone: 100+ meetings'
 url: '/blog/reading-group-milestones-100+-meetings'
 date: Sat, 31 Jan 2026 19:00:00 +0000
 draft: false
@@ -13,7 +13,7 @@ summary: 'Celebrating the milestone by writing down about our technical reading 
 
 📖 Celebrating a milestone in the reading group I co-lead at work by writing down how we function and some things I learned along the way.
 
-We managed to last for more than 100 meetings in two-and-a-half year 🥳 (and we keep going!)
+We managed to last for more than 100 meetings in two-and-a-half year 🥳 (and we keep going!).
 
 During that time, we covered 12 books, 21 research papers and 24 blog articles.
 
@@ -30,7 +30,7 @@ Those choices were definitely impacted by organizational constraints and by our 
 
 The constraints we had at the time were:
 - we were on a project that was fully remote (it's changing right now, we are back three days to the office and soon five, we might have to revisit some of those decisions soon).
-- multiple time zone: Central European Time and Eastern Standard Time for most people (six hours difference). It means that for a
+- multiple time zone: Central European Time and Eastern Standard Time for most people (six hours difference). We need to find a time that overlap with both timezone if we want to be able to reach everyone.
 - a department of around 100 people at the time (and now around 300), with many small teams and interactions between teams was often very low ("silos").
 
 Our goals:
@@ -77,7 +77,7 @@ The tradeoff here is that we might have reached a larger audience, but we would 
 
 ## Takeaways
 
-Below is the takeaways from this experience. Most of it is transferable to many volunteer activities.
+Below are the takeaways from this experience. Most of it is transferable to many volunteer activities.
 
 ### Perseverance is key
 
