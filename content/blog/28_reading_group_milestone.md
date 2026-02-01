@@ -11,7 +11,7 @@ summary: 'Celebrating the milestone by writing down about our technical reading 
 
 # Milestone
 
-📖 Celebrating a milestone in the reading group I co-lead at work by writing down how we function and things I learned along the way.
+📖 Celebrating a milestone in the technical reading group I co-lead at work by writing down how we function and things I learned along the way.
 
 We went past the 100 meetings marks in two-and-a-half year 🥳.
 
