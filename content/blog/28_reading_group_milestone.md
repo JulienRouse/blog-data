@@ -49,7 +49,7 @@ The tradeoff here is that the barrier to join is higher (less flexibility, activ
 
 From the start the goal was to start the group with minimal structure, run a few sessions, get feedback, changes as needed and see where that would lead us.
 
-### What happen during the meetings
+### What happens during the meetings
 
 As said above, we started without too many preconceived ideas on that, and what we currently do evolved over time.
 
@@ -122,7 +122,7 @@ There is a limit to it. If the majority of people did not read the chapters, it 
 
 ### Keeping tracks of group statistics
 
-By [writing down](#write-down-the-essentials) an agenda for each meeting, what we read and what we enjoyed, I was able to put together a quick summary of our activity (same as I shared in the introduction `more than 100 meetings over two-and-a-half years [...] we covered 12 books, 21 research papers and 24 blog articles.`).
+By [writing down](#write-down-the-essentials) an agenda for each meeting, what we read and what we enjoyed, I was able to put together a quick summary of our activity (same as I shared in the introduction _"more than 100 meetings over two-and-a-half years [...] we covered 12 books, 21 research papers and 24 blog articles."_).
 
 This allowed to [share](#broadcast-information) those statistics more widely once per year or when we hit a milestone, which gave even more visibility to our activity and helped interest more people.
 
